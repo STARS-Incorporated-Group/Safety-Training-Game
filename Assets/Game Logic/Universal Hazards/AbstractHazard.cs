@@ -2,28 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AbstractHazard : MonoBehaviour
+namespace backend
 {
-    public enum DamageType
+    public abstract class AbstractHazard
     {
-        Burn,
-        Shock,
-        Cut,
-        LimbLoss,
-        Crush,
-        Poison,
-        Radiation,
-        Suffocation,
-        InstantDeath
-    }
-    
-    public readonly DamageType DmgType;
-    public ColliderHit Collision;
-    private float _damageAmount;
-    private float _size;
-    
-    protected AbstractHazard(DamageType damageType)
-    {
-        this.DmgType = damageType;
+        public readonly HazardType Type;
+        public readonly DamageType DmgType;
+        public float damageAmount { get; protected set; }
+        
+        protected AbstractHazard(HazardType type, DamageType damageType)
+        {
+            this.Type = type;
+            this.DmgType = damageType;
+        }
+
+        public virtual void OnRemedy(AbstractRemedy remedy) {}
     }
 }
