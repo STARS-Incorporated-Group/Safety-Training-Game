@@ -17,7 +17,7 @@ public class Fires : MonoBehaviour
     public Type type { get; set; }
     public float intensity { get; set; }
     
-    public bool extinguishes
+    public bool extinguishes;
     
     // Start is called before the first frame update
     void Start()
