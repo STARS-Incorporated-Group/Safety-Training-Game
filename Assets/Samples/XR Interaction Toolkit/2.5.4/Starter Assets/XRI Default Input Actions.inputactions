@@ -1871,17 +1871,6 @@
                 },
                 {
                     "name": "",
-                    "id": "022046aa-be71-4288-859d-6dd42844f6e6",
-                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
-                    "interactions": "",
-                    "processors": "StickDeadzone",
-                    "groups": "Continuous Move",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c4b46d7d-8231-4672-83f9-75af565faf57",
                     "path": "<XRController>{RightHand}/{Primary2DAxis}",
                     "interactions": "",
