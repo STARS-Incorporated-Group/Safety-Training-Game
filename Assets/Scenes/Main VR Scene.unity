@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028356, g: 0.2257137, b: 0.3069222, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1851,6 +1851,7 @@ GameObject:
   - component: {fileID: 1216458053}
   - component: {fileID: 1216458052}
   - component: {fileID: 1216458051}
+  - component: {fileID: 1216458054}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -1988,6 +1989,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 1216458049}
+--- !u!114 &1216458054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216458047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7f5432b7951b54fa41f14a3bdd551b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xrOrigin: {fileID: 1216458049}
+  standingHeight: 1.6
+  crouchThreshold: 1.2
+  crouchHeight: 0.8
+  smoothSpeed: 5
 --- !u!1001 &1652185796
 PrefabInstance:
   m_ObjectHideFlags: 0
