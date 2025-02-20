@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Numerics;
 
+
 namespace Backend.Hazards
 {
     public abstract class AbstractRemedy

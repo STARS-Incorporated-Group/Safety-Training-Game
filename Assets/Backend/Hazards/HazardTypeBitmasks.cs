@@ -1,4 +1,5 @@
 using System;
+using Backend.Hazards;
 using System.Numerics;
 
 namespace Backend.Hazards
