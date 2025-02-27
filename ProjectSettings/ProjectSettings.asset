@@ -135,8 +135,8 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
   preloadedAssets:
-  - {fileID: -4138283617612316528, guid: ec47178325c62440295188e6ead1d2e6, type: 2}
-  - {fileID: 1069860258428580134, guid: fa3a31b176a1d44668be167616a8db1c, type: 2}
+  - {fileID: -6514145358773231005, guid: ec47178325c62440295188e6ead1d2e6, type: 2}
+  - {fileID: 2147471455804721855, guid: fa3a31b176a1d44668be167616a8db1c, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -157,6 +157,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.SafetyGame
+    Standalone: com.DefaultCompany.Safety-Game
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -756,7 +757,7 @@ PlayerSettings:
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
-  selectedPlatform: 2
+  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -820,7 +821,14 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -840,11 +848,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 6d3c803e-0cf7-4ab6-b3b0-7df033bc8fce
+  cloudProjectId: badade67-786f-49d4-b77e-b4f87d4b5c5e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Safety Game
-  organizationId: stars-incorporated
+  projectName: SDD Safety Training Game
+  organizationId: shiny_kaz00
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
