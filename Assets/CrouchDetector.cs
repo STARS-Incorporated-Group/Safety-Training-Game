@@ -4,20 +4,26 @@ using UnityEngine;
 using UnityEngine.XR;
 
 
+
+
 public class CrouchDetector : MonoBehaviour
 {
     public Camera mainCamera; // Assign this manually in the Inspector
     public float crouchThreshold = 1.2f; // Adjust threshold for crouching
     public bool isCrouching; // { get; private set; } // Read-only outside this class
-    
+   
+
 
     private Transform headTransform; // Stores the transform of the camera
+
 
     void Start()
     {
         UnityEngine.Debug.unityLogger.logEnabled = true;
 
+
         UnityEngine.Debug.Log("Test message: The script has started!");
+
 
         if (mainCamera == null)
         {
@@ -35,8 +41,10 @@ public class CrouchDetector : MonoBehaviour
             }
         }
 
+
         headTransform = mainCamera.transform;
     }
+
 
     void Update()
     {
@@ -53,3 +61,4 @@ public class CrouchDetector : MonoBehaviour
         }
     }
 }
+

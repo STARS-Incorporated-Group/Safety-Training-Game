@@ -1998,11 +1998,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216458047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4773375e193a4b7bb81bd5a7d9e28b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 95a9fc94dd4c941929cbda3f65193d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1660039125}
-  crouchThreshold: 2.5
+  crouchThreshold: 1.2
   isCrouching: 0
 --- !u!1001 &1652185796
 PrefabInstance:
