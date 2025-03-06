@@ -45,6 +45,11 @@ public class FlickerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if (Time.time > gameStartTime + 5f)
+        {
+            MakeDynamic();
+            this.enabled = false;
+        }*/
         if (Time.time > gameStartTime + endLight)
         {
             float c = Random.Range(0f, 1f);
