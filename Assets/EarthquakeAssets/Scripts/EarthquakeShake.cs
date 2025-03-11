@@ -3,7 +3,7 @@ using UnityEngine;
 public class EarthquakeShake : MonoBehaviour
 {
     private float initialShakeIntensity = 0f;  // Starting intensity
-    private float maxShakeIntensity = 20f;     // Maximum intensity
+    public float maxShakeIntensity = 20f;     // Maximum intensity
     private float intensityIncreaseDuration = 45f; // Time (in seconds) to reach max intensity and back to 0
     private float intensityDecreaseDuration = 15f;
     private float startDelay = 0f;             // Delay (in seconds) before shaking starts
@@ -14,7 +14,7 @@ public class EarthquakeShake : MonoBehaviour
     private Rigidbody rb;                    // Reference to the Rigidbody
     private int counter = 0;
     private float elapsedTime = 0f;          // Tracks time since shaking started
-    private float shakeIntensity = 0f;       // Current intensity
+    public float shakeIntensity = 0f;       // Current intensity
     private float gameStartTime;             // Tracks the time the game starts
 
     private int collisionCount = 0;          // Tracks number of colliding objects

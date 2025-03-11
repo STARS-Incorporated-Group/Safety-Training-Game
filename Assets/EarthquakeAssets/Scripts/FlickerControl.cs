@@ -19,6 +19,9 @@ public class FlickerControl : MonoBehaviour
 
     private Rigidbody rb;
 
+    public AudioSource flickerSound;
+    private bool soundPlaying = false;
+
     void Start()
     {
         timer = Random.Range(0.1f, 2.2f);
@@ -45,6 +48,13 @@ public class FlickerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // sound
+        if (Time.time > startFlicker && soundPlaying == false)
+        {
+            flickerSound.Play();
+            soundPlaying = true;
+        }
+
         /*if (Time.time > gameStartTime + 5f)
         {
             MakeDynamic();
