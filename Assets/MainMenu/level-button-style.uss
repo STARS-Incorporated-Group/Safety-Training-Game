@@ -1,0 +1,27 @@
+.level-button-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Fit to parent height */
+    width: auto; /* Fit to children */
+    padding: 5%; /* Initial padding */
+    border-radius: 10%; /* Rounded corners at 10% of width */
+    transition: all 0.3s ease-in-out;
+    background-color: #3498db; /* Example color */
+    border: none;
+}
+
+.level-button-style:hover {
+    padding: 10%; /* Expand padding */
+    background-color: #5fa8e7; /* Simulate brightness increase */
+}
+
+.level-button-style .text-box {
+    font-size: 20%; /* 20% of button height */
+    padding: 5%; /* 5% of button height */
+}
+
+.level-button-style .visual-element {
+    aspect-ratio: 1 / 1;
+    flex-grow: 1; /* Fill remaining space */
+}
