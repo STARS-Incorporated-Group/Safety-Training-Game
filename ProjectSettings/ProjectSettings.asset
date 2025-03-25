@@ -134,9 +134,7 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: -4138283617612316528, guid: ec47178325c62440295188e6ead1d2e6, type: 2}
-  - {fileID: 1069860258428580134, guid: fa3a31b176a1d44668be167616a8db1c, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -757,7 +755,7 @@ PlayerSettings:
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
-  selectedPlatform: 0
+  selectedPlatform: 2
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -765,8 +763,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Safety Game
-  metroPackageVersion: 
+  metroPackageName: SafetyGame
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -774,7 +772,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Safety Game
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Safety Game
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
