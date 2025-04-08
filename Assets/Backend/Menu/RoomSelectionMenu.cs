@@ -1,0 +1,25 @@
+using System;
+using System.Collections;
+using Unity.VisualScripting;
+
+namespace Backend.Menu
+{
+    public class RoomSelectionMenu: AbstractMenu
+    {
+        private AbstractMenu[] _children;
+        
+        public RoomSelectionMenu(MenuStateMachine manager, AbstractMenu[] children): 
+            base(manager, MenuState.RoomSelector)
+        {
+            this._children = children;
+        }
+
+        public void SelectRoom(int index)
+        {
+            if (index < _children.Length)
+            {
+                this.Manager.Select(_children[index]);
+            }
+        }
+    }
+}
