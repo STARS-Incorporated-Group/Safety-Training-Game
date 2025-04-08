@@ -6,5 +6,6 @@ namespace Backend.GameParams
         public float Brightness;
         public float FoV;
         public float Sensitivity;
+        public float Volume;
     }
 }

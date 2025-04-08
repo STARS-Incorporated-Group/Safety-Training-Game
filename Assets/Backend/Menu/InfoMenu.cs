@@ -2,29 +2,29 @@ namespace Backend.Menu
 {
     public class InfoMenu: AbstractMenu
     {
-        protected InfoMenu PreviousPage;
-        protected InfoMenu NextPage;
+        private readonly InfoMenu _previousPage;
+        private readonly InfoMenu _nextPage;
         
-        InfoMenu(MenuStateMachine manager, InfoMenu previousPage, InfoMenu nextPage) :
+        public InfoMenu(MenuManager manager, InfoMenu previousPage, InfoMenu nextPage) :
             base(manager)
         {
-            PreviousPage = previousPage;
-            NextPage = nextPage;
+            _previousPage = previousPage;
+            _nextPage = nextPage;
         }
 
         public void Next()
         {
-            if (NextPage != null)
+            if (_nextPage != null)
             {
-                Manager.Select(NextPage);
+                Manager.OverwriteCurrentMenu(_nextPage);
             }
         }
 
         public void Previous()
         {
-            if (PreviousPage != null)
+            if (_previousPage != null)
             {
-                Manager.Select(PreviousPage);
+                Manager.OverwriteCurrentMenu(_previousPage);
             }
         }
     }

@@ -6,5 +6,6 @@ namespace Backend.GameParams
         Brightness,
         FoV,
         Sensitivity,
+        Volume,
     }
 }

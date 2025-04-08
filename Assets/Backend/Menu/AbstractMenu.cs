@@ -7,9 +7,9 @@ namespace Backend.Menu
 {
     public abstract class AbstractMenu
     {
-        protected MenuStateMachine Manager;
+        protected readonly MenuManager Manager;
 
-        protected AbstractMenu(MenuStateMachine manager)
+        protected AbstractMenu(MenuManager manager)
         {
             this.Manager = manager;
         }
@@ -22,9 +22,10 @@ namespace Backend.Menu
         {
         }
 
-        public void Back()
+        public virtual void Back()
         {
             Manager.Back();
         }
+        
     }
 }

@@ -5,12 +5,12 @@ using UnityEngine.Assertions;
 
 namespace Backend.Menu
 {
-    public class MenuStateMachine
+    public class MenuManager
     {
-        private List<AbstractMenu> _menuHistory;
+        private readonly List<AbstractMenu> _menuHistory;
         private AbstractMenu _currentMenu;
 
-        public MenuStateMachine()
+        public MenuManager()
         {
             _menuHistory = new List<AbstractMenu>();
             _currentMenu = null;
@@ -35,6 +35,21 @@ namespace Backend.Menu
         public void Select(AbstractMenu menu)
         {
             _menuHistory.Add(_currentMenu);
+            _currentMenu.Close();
+            _currentMenu = menu;
+            _currentMenu.Load();
+        }
+        
+        public void OverwriteCurrentMenu(AbstractMenu menu)
+        {
+            _currentMenu.Close();
+            _currentMenu = menu;
+            _currentMenu.Load();
+        }
+        
+        public void SelectRoot(AbstractMenu menu)
+        {
+            _menuHistory.Clear();
             _currentMenu.Close();
             _currentMenu = menu;
             _currentMenu.Load();

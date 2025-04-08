@@ -6,7 +6,7 @@ namespace Backend.Menu
     {
         private GameParams.UserConfig _userConfig;
         
-        SettingsMenu(MenuStateMachine manager, GameParams.UserConfig userConfig):
+        SettingsMenu(MenuManager manager, GameParams.UserConfig userConfig):
             base(manager)
         {
             this._userConfig = userConfig;
@@ -27,6 +27,9 @@ namespace Backend.Menu
                     break;
                 case GameParams.EUserOptions.Sensitivity:
                     _userConfig.Sensitivity = value;
+                    break;
+                case GameParams.EUserOptions.Volume:
+                    _userConfig.Volume = value;
                     break;
                 default:
                     // error

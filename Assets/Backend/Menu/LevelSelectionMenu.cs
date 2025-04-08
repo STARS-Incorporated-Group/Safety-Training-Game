@@ -5,10 +5,9 @@ namespace Backend.Menu
 {
     public class LevelSelectionMenu : AbstractMenu
     {
-        private Func<int>[] _startFunctions;
-        private MenuStateMachine _manager;
+        private readonly Func<int>[] _startFunctions;
 
-        public LevelSelectionMenu(MenuStateMachine manager, Func<int>[] startFunctions) : 
+        public LevelSelectionMenu(MenuManager manager, Func<int>[] startFunctions) : 
             base(manager)
         {
             _startFunctions = startFunctions;
