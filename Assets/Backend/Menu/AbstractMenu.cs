@@ -7,13 +7,11 @@ namespace Backend.Menu
 {
     public abstract class AbstractMenu
     {
-        public readonly MenuState State;
         protected MenuStateMachine Manager;
 
-        protected AbstractMenu(MenuStateMachine manager, MenuState state)
+        protected AbstractMenu(MenuStateMachine manager)
         {
             this.Manager = manager;
-            this.State = state;
         }
 
         public virtual void Close()

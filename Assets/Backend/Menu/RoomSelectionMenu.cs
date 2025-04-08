@@ -9,7 +9,7 @@ namespace Backend.Menu
         private AbstractMenu[] _children;
         
         public RoomSelectionMenu(MenuStateMachine manager, AbstractMenu[] children): 
-            base(manager, MenuState.RoomSelector)
+            base(manager)
         {
             this._children = children;
         }

@@ -9,7 +9,7 @@ namespace Backend.Menu
         private MenuStateMachine _manager;
 
         public LevelSelectionMenu(MenuStateMachine manager, Func<int>[] startFunctions) : 
-            base(manager, MenuState.LevelSelector)
+            base(manager)
         {
             _startFunctions = startFunctions;
         }

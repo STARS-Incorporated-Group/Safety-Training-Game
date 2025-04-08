@@ -11,7 +11,7 @@ namespace Backend.Menu
 
         public MainMenu(MenuStateMachine manager, RoomSelectionMenu roomSelectionMenu, SettingsMenu settingsMenu,
             InfoMenu infoMenu) :
-            base(manager, MenuState.MainMenu)
+            base(manager)
         {
             _roomSelectionMenu = roomSelectionMenu;
             _settingsMenu = settingsMenu;
