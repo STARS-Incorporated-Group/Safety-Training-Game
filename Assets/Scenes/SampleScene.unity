@@ -3300,6 +3300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5946930418513762904, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6575305919652554691, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3346,7 +3350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8479223275803733868, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
       propertyPath: m_Name
-      value: Fire Extinguisher Offset
+      value: Fire Extinguisher with Offset
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089650184085375695, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
