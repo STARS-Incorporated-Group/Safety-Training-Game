@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class EarthquakeShake : MonoBehaviour
 {
@@ -20,10 +21,20 @@ public class EarthquakeShake : MonoBehaviour
     private int collisionCount = 0;          // Tracks number of colliding objects
     private bool isIncreasing = true;        // Controls intensity increase/decrease
 
+    private XRGrabInteractable grabInteractable;
+    private bool isBeingHeld = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         gameStartTime = Time.time;
+
+        grabInteractable = GetComponent<XRGrabInteractable>();
+        if (grabInteractable != null)
+        {
+            grabInteractable.selectEntered.AddListener(OnGrab);
+            grabInteractable.selectExited.AddListener(OnRelease);
+        }
     }
 
     void OnCollisionEnter(Collision other)
@@ -38,7 +49,7 @@ public class EarthquakeShake : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Time.time < gameStartTime + startDelay || collisionCount == 0)
+        if (Time.time < gameStartTime + startDelay || collisionCount == 0 || isBeingHeld)
         {
             return;
         }
@@ -82,5 +93,18 @@ public class EarthquakeShake : MonoBehaviour
 
             counter = 0;
         }
+    }
+
+    void OnGrab(SelectEnterEventArgs args)
+    {
+        isBeingHeld = true;
+
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
+
+    private void OnRelease(SelectExitEventArgs args)
+    {
+        isBeingHeld = false;
     }
 }
