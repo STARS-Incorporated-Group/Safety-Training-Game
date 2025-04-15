@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206516180}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.42, z: 1.71}
+  m_LocalPosition: {x: 0, y: 1.42, z: 0.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1581707984}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -1273,6 +1273,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5296731756303812287, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1581707984}
     - target: {fileID: 5946930418513762904, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -1332,6 +1336,10 @@ PrefabInstance:
     - target: {fileID: 8479223275803733868, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
       propertyPath: m_Name
       value: Fire Extinguisher Offset New
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479223275803733868, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9089650184085375695, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3401,6 +3409,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5296731756303812287, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1581707984}
     - target: {fileID: 5296731756303812287, guid: d9c953f0d696c4cd89c6cd304d5b2f32, type: 3}
       propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.size
       value: 1
