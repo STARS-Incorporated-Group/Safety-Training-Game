@@ -99,8 +99,9 @@ public class EarthquakeShake : MonoBehaviour
     {
         isBeingHeld = true;
 
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
+        //rb.velocity = Vector3.zero;
+        //rb.angularVelocity = Vector3.zero;
     }
 
     private void OnRelease(SelectExitEventArgs args)
