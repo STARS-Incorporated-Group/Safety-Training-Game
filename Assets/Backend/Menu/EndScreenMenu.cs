@@ -4,25 +4,24 @@ namespace Backend.Menu
 {
     public class EndScreenMenu: AbstractMenu
     {
-        private readonly MainMenu _mainMenu;
-        private readonly Func<int> _replayFunc;
+        protected MainMenu mainMenu {get; private set;}
+        protected Func<int> replayFunc {get; private set;}
         
-        public EndScreenMenu(MenuManager manager, Func<int> replayFunc, MainMenu mainMenu)
-            : base(manager)
+        public void Configure(Func<int> replayFunc, MainMenu mainMenu)
         {
-            _mainMenu = mainMenu;
-            _replayFunc = replayFunc;
+            this.mainMenu = mainMenu;
+            this.replayFunc = replayFunc;
         }
 
         public void GoToMainMenu()
         {
-            Manager.SelectRoot(_mainMenu);
+            manager.SelectRoot(mainMenu);
         }
 
         public void Replay()
         {
-            _replayFunc();
-            Manager.Close();
+            replayFunc();
+            manager.Close();
         }
     }
 }

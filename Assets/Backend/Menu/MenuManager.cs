@@ -7,6 +7,8 @@ namespace Backend.Menu
 {
     public class MenuManager
     {
+        public static MenuManager GlobalManager = new MenuManager();
+        
         private readonly List<AbstractMenu> _menuHistory;
         private AbstractMenu _currentMenu;
 

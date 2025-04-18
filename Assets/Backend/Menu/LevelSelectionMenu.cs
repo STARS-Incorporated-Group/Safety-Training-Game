@@ -5,19 +5,18 @@ namespace Backend.Menu
 {
     public class LevelSelectionMenu : AbstractMenu
     {
-        private readonly Func<int>[] _startFunctions;
-
-        public LevelSelectionMenu(MenuManager manager, Func<int>[] startFunctions) : 
-            base(manager)
+        private Func<int>[] _startFunctions;
+        
+        public void Configure(Func<int>[] startFunctions)
         {
-            _startFunctions = startFunctions;
+            this._startFunctions = startFunctions;
         }
 
         public void SelectLevel(int index)
         {
             if (index < _startFunctions.Length)
             {
-                Manager.Close();
+                manager.Close();
                 _startFunctions[index]();
             }
         }

@@ -6,19 +6,18 @@ namespace Backend.Menu
 {
     public class RoomSelectionMenu: AbstractMenu
     {
-        private AbstractMenu[] _children;
+        protected LevelSelectionMenu[] rooms { get; private set; }
         
-        public RoomSelectionMenu(MenuManager manager, AbstractMenu[] children): 
-            base(manager)
+        public void Configure(LevelSelectionMenu[] children)
         {
-            this._children = children;
+            this.rooms = children;
         }
-
+        
         public void SelectRoom(int index)
         {
-            if (index < _children.Length)
+            if (index < rooms.Length)
             {
-                this.Manager.Select(_children[index]);
+                this.manager.Select(rooms[index]);
             }
         }
     }

@@ -2,31 +2,30 @@ namespace Backend.Menu
 {
     public class InfoSelectorMenu: AbstractMenu
     {
-        private readonly InfoMenu _controlsMenu;
-        private readonly InfoMenu _instructionsMenu;
-        private readonly InfoMenu _scoringMenu;
+        protected InfoMenu controlsMenu { get; private set; }
+        protected InfoMenu instructionsMenu { get; private set; }
+        protected InfoMenu scoringMenu { get; private set; }
 
-        public InfoSelectorMenu(MenuManager manager, InfoMenu controlsMenu, InfoMenu instructionsMenu, InfoMenu scoringMenu)
-            : base(manager)
+        public void Configure(InfoMenu controlsMenu, InfoMenu instructionsMenu, InfoMenu scoringMenu)
         {
-            _controlsMenu = controlsMenu;
-            _instructionsMenu = instructionsMenu;
-            _scoringMenu = scoringMenu;
+            this.controlsMenu = controlsMenu;
+            this.instructionsMenu = instructionsMenu;
+            this.scoringMenu = scoringMenu;
         }
 
         public void GoToControlsMenu()
         {
-            Manager.Select(_controlsMenu);
+            manager.Select(controlsMenu);
         }
         
         public void GoToInstructionsMenu()
         {
-            Manager.Select(_instructionsMenu);
+            manager.Select(instructionsMenu);
         }
         
         public void GoToScoringMenu()
         {
-            Manager.Select(_scoringMenu);
+            manager.Select(scoringMenu);
         }
     }
 }

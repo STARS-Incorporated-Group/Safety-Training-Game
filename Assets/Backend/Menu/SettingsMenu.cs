@@ -4,12 +4,11 @@ namespace Backend.Menu
 {
     public class SettingsMenu: AbstractMenu
     {
-        private GameParams.UserConfig _userConfig;
-        
-        SettingsMenu(MenuManager manager, GameParams.UserConfig userConfig):
-            base(manager)
+        protected GameParams.UserConfig userConfiguration { get; private set; }
+
+        public void Configure(GameParams.UserConfig userConfig)
         {
-            this._userConfig = userConfig;
+            this.userConfiguration = userConfig;
         }
         
         public void SetFloatOption(GameParams.EUserOptions option, float value)
@@ -17,23 +16,24 @@ namespace Backend.Menu
             switch (option)
             {
                 case GameParams.EUserOptions.PlayerHeight:
-                    _userConfig.PlayerHeight = value;
+                    userConfiguration.playerHeight = value;
                     break;
                 case GameParams.EUserOptions.Brightness:
-                    _userConfig.Brightness = value;
+                    userConfiguration.brightness = value;
                     break;
                 case GameParams.EUserOptions.FoV:
-                    _userConfig.FoV = value;
+                    userConfiguration.fov = value;
                     break;
                 case GameParams.EUserOptions.Sensitivity:
-                    _userConfig.Sensitivity = value;
+                    userConfiguration.sensitivity = value;
                     break;
                 case GameParams.EUserOptions.Volume:
-                    _userConfig.Volume = value;
+                    userConfiguration.volume = value;
                     break;
                 default:
                     // error
                     throw new ArgumentOutOfRangeException(nameof(option), option, null);
+                    break;
             }
         }
     }
