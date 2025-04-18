@@ -1,40 +1,37 @@
-using UnityEditor;
-
 namespace Backend.Menu
 {
     public class MainMenu : AbstractMenu
     {
-        private readonly RoomSelectionMenu _roomSelectionMenu;
-        private readonly SettingsMenu _settingsMenu;
-        private readonly InfoSelectorMenu _infoMenu;
+        protected RoomSelectionMenu roomSelectionMenu { get; private set; }
+        protected SettingsMenu settingsMenu { get; private set; }
+        protected InfoSelectorMenu infoMenu { get; private set; }
 
-        public MainMenu(MenuManager manager, RoomSelectionMenu roomSelectionMenu, SettingsMenu settingsMenu,
-            InfoSelectorMenu infoMenu) :
-            base(manager)
+        public void Configure(RoomSelectionMenu roomSelectionMenu, SettingsMenu settingsMenu,
+            InfoSelectorMenu infoMenu)
         {
-            _roomSelectionMenu = roomSelectionMenu;
-            _settingsMenu = settingsMenu;
-            _infoMenu = infoMenu;
+            this.roomSelectionMenu = roomSelectionMenu;
+            this.settingsMenu = settingsMenu;
+            this.infoMenu = infoMenu;
         }
 
         public void GoToRoomSelectionMenu()
         {
-            Manager.Select(_roomSelectionMenu);
+            manager.Select(roomSelectionMenu);
         }
 
         public void GoToSettingsMenu()
         {
-            Manager.Select(_settingsMenu);
+            manager.Select(settingsMenu);
         }
 
         public void GoToInfoMenu()
         {
-            Manager.Select(_infoMenu);
+            manager.Select(infoMenu);
         }
 
         public override void Back()
         {
-            throw new System.NotImplementedException("No previous menu from MainMenu");
+            //throw new System.NotImplementedException("No previous menu from MainMenu");
         }
     }
 }

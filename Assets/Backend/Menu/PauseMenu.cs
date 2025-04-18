@@ -4,49 +4,49 @@ namespace Backend.Menu
 {
     public class PauseMenu: AbstractMenu
     {
-        private readonly SettingsMenu _settingsMenu;
-        private readonly InfoSelectorMenu _infoMenu;
-        private readonly MainMenu _mainMenu;
-        private readonly Func<int> _restartFunc;
-        
-        public PauseMenu(MenuManager manager, Func<int> restartFunc, SettingsMenu settingsMenu, InfoSelectorMenu infoMenu, MainMenu mainMenu) :
-            base(manager)
+        protected SettingsMenu settingsMenu {get; set;}
+        protected InfoSelectorMenu infoMenu {get; set;}
+        protected MainMenu mainMenu {get; set;}
+        protected Func<int> restartFunc {get; set;}
+
+        public void Configure(Func<int> restartFunc, SettingsMenu settingsMenu, InfoSelectorMenu infoMenu,
+            MainMenu mainMenu)
         {
-            _settingsMenu = settingsMenu;
-            _infoMenu = infoMenu;
-            _mainMenu = mainMenu;
-            _restartFunc = restartFunc;
+            this.settingsMenu = settingsMenu;
+            this.infoMenu = infoMenu;
+            this.mainMenu = mainMenu;
+            this.restartFunc = restartFunc;
         }
         
         public void GoToSettingsMenu()
         {
-            Manager.Select(_settingsMenu);
+            manager.Select(settingsMenu);
         }
         
         public void GoToInfoMenu()
         {
-            Manager.Select(_infoMenu);
+            manager.Select(infoMenu);
         }
         
         public void GoToMainMenu()
         {
-            Manager.Select(_mainMenu);
+            manager.Select(mainMenu);
         }
         
         public virtual void RestartLevel()
         {
-            _restartFunc();
-            Manager.Close();
+            restartFunc();
+            manager.Close();
         }
         
         public virtual void ExitLevel()
         {
-            Manager.SelectRoot(_mainMenu);
+            manager.SelectRoot(mainMenu);
         }
         
         public virtual void ResumeGame()
         {
-            Manager.Close();
+            manager.Close();
         }
         
         public override void Back()
