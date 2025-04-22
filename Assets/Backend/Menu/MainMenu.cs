@@ -13,9 +13,9 @@ namespace Backend.Menu
         [SerializeField] protected RoomSelectionMenu roomSelectionMenu;
         
         [Header("UI Buttons (assign in Inspector)")]
-        [SerializeField] private Button settingsButton;
-        [SerializeField] private Button infoButton;
-        [SerializeField] private Button roomButton;
+        [SerializeField] protected Button settingsButton;
+        [SerializeField] protected Button infoButton;
+        [SerializeField] protected Button roomButton;
         
         protected override void WireButtons()
         {

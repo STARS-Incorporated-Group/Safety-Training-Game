@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -14,18 +15,16 @@ namespace Backend.Menu
         [SerializeField] protected MainMenu         mainMenu;
         
         [Header("UI Buttons (assign in Inspector)")]
-        [SerializeField] private Button resumeButton;
-        [SerializeField] private Button restartButton;
-        [SerializeField] private Button settingsButton;
-        [SerializeField] private Button infoButton;
-        [SerializeField] private Button exitButton;
-        protected Func<int> restartFunc {get; set;}
+        [SerializeField] protected Button resumeButton;
+        [SerializeField] protected Button restartButton;
+        [SerializeField] protected Button settingsButton;
+        [SerializeField] protected Button infoButton;
+        [SerializeField] protected Button exitButton;
 
-        public void Configure(Func<int> restartFunc)
-        {
-            this.restartFunc = restartFunc;
-        }
-
+        [Header("Configure Events (assign in Inspector)")] 
+        [SerializeField] protected UnityEvent restartEvent;
+        [SerializeField] protected UnityEvent resumeEvent;
+        
         protected override void WireButtons()
         {
             resumeButton.onClick.AddListener(ResumeGame);
@@ -61,7 +60,7 @@ namespace Backend.Menu
         
         public virtual void RestartLevel()
         {
-            restartFunc();
+            restartEvent.Invoke();
             manager.Close();
         }
         
@@ -72,6 +71,7 @@ namespace Backend.Menu
         
         public virtual void ResumeGame()
         {
+            resumeEvent.Invoke();
             manager.Close();
         }
         
