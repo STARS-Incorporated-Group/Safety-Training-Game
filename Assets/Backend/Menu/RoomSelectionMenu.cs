@@ -20,15 +20,19 @@ namespace Backend.Menu
         
         protected override void WireButtons()
         {
-            for (var i = 0; i < roomMenus.Count; i++)
+            if (_listeners.Count == 0)
+            {
+                for (var i = 0; i < roomMenus.Count; i++)
+                {
+                    var index = i;
+                    _listeners.Add(() => manager.Select(roomMenus[index]));
+                }
+            }
+
+            for (var i = 0; i < roomButtons.Count; i++)
             {
                 var index = i;
-                UnityAction listener = () =>
-                {
-                    manager.Select(roomMenus[index]);
-                };
-                _listeners.Add(listener);
-                roomButtons[i].onClick.AddListener(listener);
+                roomButtons[i].onClick.AddListener(_listeners[index]);
             }
             backButton.onClick.AddListener(Back);
         }
@@ -39,7 +43,6 @@ namespace Backend.Menu
             {
                 roomButtons[i].onClick.RemoveListener(_listeners[i]);
             }
-            _listeners.Clear();
             backButton.onClick.RemoveListener(Back);
         }
     }

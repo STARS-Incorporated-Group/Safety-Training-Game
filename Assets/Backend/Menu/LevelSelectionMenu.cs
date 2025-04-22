@@ -32,18 +32,25 @@ namespace Backend.Menu
 
         protected override void WireButtons()
         {
+            if (_listeners.Count == 0)
+            {
+                for (var i = 0; i < startButtons.Count; i++)
+                {
+                    var index = i;
+                    this._listeners.Add(() =>
+                    {
+                        manager.Close();
+                        startEvents[index].Invoke();
+                    });
+                }
+            }
+
             for (var i = 0; i < startButtons.Count; i++)
             {
                 var index = i;
-                UnityAction listener = () =>
-                {
-                    manager.Close();
-                    startEvents[index].Invoke();
-                };
-                
-                this._listeners.Add(listener);
-                startButtons[index].onClick.AddListener(listener);
+                startButtons[index].onClick.AddListener(_listeners[index]);
             }
+
             backButton.onClick.AddListener(Back);
         }
         
@@ -53,7 +60,6 @@ namespace Backend.Menu
             {
                 startButtons[i].onClick.RemoveListener(_listeners[i]);
             }
-            _listeners.Clear();
             backButton.onClick.RemoveListener(Back);
         }
 
