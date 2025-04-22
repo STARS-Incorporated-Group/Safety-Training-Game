@@ -1,21 +1,47 @@
 using System;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Backend.Menu
 {
+    [RequireComponent(typeof(Canvas))]
     public class PauseMenu: AbstractMenu
     {
-        protected SettingsMenu settingsMenu {get; set;}
-        protected InfoSelectorMenu infoMenu {get; set;}
-        protected MainMenu mainMenu {get; set;}
+        [Header("Configure Logic (assign in Inspector)")]
+        [SerializeField] protected SettingsMenu     settingsMenu;
+        [SerializeField] protected InfoSelectorMenu infoMenu;
+        [SerializeField] protected MainMenu         mainMenu;
+        
+        [Header("UI Buttons (assign in Inspector)")]
+        [SerializeField] private Button resumeButton;
+        [SerializeField] private Button restartButton;
+        [SerializeField] private Button settingsButton;
+        [SerializeField] private Button infoButton;
+        [SerializeField] private Button exitButton;
         protected Func<int> restartFunc {get; set;}
 
-        public void Configure(Func<int> restartFunc, SettingsMenu settingsMenu, InfoSelectorMenu infoMenu,
-            MainMenu mainMenu)
+        public void Configure(Func<int> restartFunc)
         {
-            this.settingsMenu = settingsMenu;
-            this.infoMenu = infoMenu;
-            this.mainMenu = mainMenu;
             this.restartFunc = restartFunc;
+        }
+
+        protected override void WireButtons()
+        {
+            resumeButton.onClick.AddListener(ResumeGame);
+            restartButton.onClick.AddListener(RestartLevel);
+            settingsButton.onClick.AddListener(GoToSettingsMenu);
+            infoButton.onClick.AddListener(GoToInfoMenu);
+            exitButton.onClick.AddListener(ExitLevel);
+        }
+
+        protected override void UnwireButtons()
+        {
+            resumeButton.onClick.RemoveListener(ResumeGame);
+            restartButton.onClick.RemoveListener(RestartLevel);
+            settingsButton.onClick.RemoveListener(GoToSettingsMenu);
+            infoButton.onClick.RemoveListener(GoToInfoMenu);
+            exitButton.onClick.RemoveListener(ExitLevel);
         }
         
         public void GoToSettingsMenu()

@@ -1,24 +1,43 @@
-using System;
-using System.Collections;
-using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Backend.Menu
 {
+    [RequireComponent(typeof(Canvas))]
     public class RoomSelectionMenu: AbstractMenu
     {
-        protected LevelSelectionMenu[] rooms { get; private set; }
+        [Header("Configure Logic (assign in Inspector)")]
+        [SerializeField] protected LevelSelectionMenu labMenu;
+        [SerializeField] protected LevelSelectionMenu officeMenu;
         
-        public void Configure(LevelSelectionMenu[] children)
+        [Header("UI Buttons (assign in Inspector)")]
+        [SerializeField] private Button labButton;
+        [SerializeField] private Button officeButton;
+        [SerializeField] private Button backButton;
+        
+        protected override void WireButtons()
         {
-            this.rooms = children;
+            officeButton.onClick.AddListener(GoToOfficeLevelMenu);
+            labButton.onClick.AddListener(GoToLabLevelMenu);
+            backButton.onClick.AddListener(Back);
+        }
+
+        protected override void UnwireButtons()
+        {
+            officeButton.onClick.RemoveListener(GoToOfficeLevelMenu);
+            labButton.onClick.RemoveListener(GoToLabLevelMenu);
+            backButton.onClick.RemoveListener(Back);
         }
         
-        public void SelectRoom(int index)
+        public void GoToLabLevelMenu()
         {
-            if (index < rooms.Length)
-            {
-                this.manager.Select(rooms[index]);
-            }
+            this.manager.Select(labMenu);
+        }
+        
+        public void GoToOfficeLevelMenu()
+        {
+            this.manager.Select(officeMenu);
         }
     }
 }

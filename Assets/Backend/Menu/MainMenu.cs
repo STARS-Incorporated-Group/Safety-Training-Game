@@ -1,17 +1,34 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 namespace Backend.Menu
 {
+    [RequireComponent(typeof(Canvas))]
     public class MainMenu : AbstractMenu
     {
-        protected RoomSelectionMenu roomSelectionMenu { get; private set; }
-        protected SettingsMenu settingsMenu { get; private set; }
-        protected InfoSelectorMenu infoMenu { get; private set; }
-
-        public void Configure(RoomSelectionMenu roomSelectionMenu, SettingsMenu settingsMenu,
-            InfoSelectorMenu infoMenu)
+        [Header("Configure Logic (assign in Inspector)")]
+        [SerializeField] protected SettingsMenu      settingsMenu;
+        [SerializeField] protected InfoSelectorMenu  infoMenu;
+        [SerializeField] protected RoomSelectionMenu roomSelectionMenu;
+        
+        [Header("UI Buttons (assign in Inspector)")]
+        [SerializeField] private Button settingsButton;
+        [SerializeField] private Button infoButton;
+        [SerializeField] private Button roomButton;
+        
+        protected override void WireButtons()
         {
-            this.roomSelectionMenu = roomSelectionMenu;
-            this.settingsMenu = settingsMenu;
-            this.infoMenu = infoMenu;
+            settingsButton.onClick.AddListener(GoToSettingsMenu);
+            infoButton.onClick.AddListener(GoToInfoMenu);
+            roomButton.onClick.AddListener(GoToRoomSelectionMenu);
+        }
+
+        protected override void UnwireButtons()
+        {
+            settingsButton.onClick.RemoveListener(GoToSettingsMenu);
+            infoButton.onClick.RemoveListener(GoToInfoMenu);
+            roomButton.onClick.RemoveListener(GoToRoomSelectionMenu);
         }
 
         public void GoToRoomSelectionMenu()
