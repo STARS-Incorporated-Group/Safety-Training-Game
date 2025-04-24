@@ -1,28 +1,50 @@
 using System;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Backend.Menu
 {
+    [RequireComponent(typeof(Canvas))]
     public class EndScreenMenu: AbstractMenu
     {
-        private readonly MainMenu _mainMenu;
-        private readonly Func<int> _replayFunc;
+        [Header("Configure Logic (assign in Inspector)")]
+        [SerializeField] protected MainMenu mainMenu;
         
-        public EndScreenMenu(MenuManager manager, Func<int> replayFunc, MainMenu mainMenu)
-            : base(manager)
-        {
-            _mainMenu = mainMenu;
-            _replayFunc = replayFunc;
-        }
+        [Header("UI Buttons (assign in Inspector)")]
+        [SerializeField] protected Button replayButton;
+        [SerializeField] protected Button exitButton;
 
+        [Header("Configure Events (assign in Inspector)")] 
+        [SerializeField] protected UnityEvent replayEvent;
+
+        protected override void WireButtons()
+        {
+            replayButton.onClick.AddListener(Replay);
+            exitButton.onClick.AddListener(GoToMainMenu);
+        }
+        
+        protected override void UnwireButtons()
+        {
+            replayButton.onClick.RemoveListener(Replay);
+            exitButton.onClick.RemoveListener(GoToMainMenu);
+        }
+        
         public void GoToMainMenu()
         {
-            Manager.SelectRoot(_mainMenu);
+            manager.SelectRoot(mainMenu);
         }
 
         public void Replay()
         {
-            _replayFunc();
-            Manager.Close();
+            replayEvent.Invoke();
+            manager.Close();
+        }
+
+        public override void Back()
+        {
+            throw new NotImplementedException();
         }
     }
 }

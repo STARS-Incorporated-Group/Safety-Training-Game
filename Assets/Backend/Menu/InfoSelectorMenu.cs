@@ -1,32 +1,52 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 namespace Backend.Menu
 {
+    [RequireComponent(typeof(Canvas))]
     public class InfoSelectorMenu: AbstractMenu
     {
-        private readonly InfoMenu _controlsMenu;
-        private readonly InfoMenu _instructionsMenu;
-        private readonly InfoMenu _scoringMenu;
+        [Header("Configure Logic (assign in Inspector)")]
+        [SerializeField] protected InfoMenu controlsMenu;
+        [SerializeField] protected InfoMenu instructionsMenu;
+        [SerializeField] protected InfoMenu scoringMenu;
+        
+        [Header("UI Buttons (assign in Inspector)")]
+        [SerializeField] protected Button controlsButton;
+        [SerializeField] protected Button instructionsButton;
+        [SerializeField] protected Button scoringButton;
+        [SerializeField] protected Button backButton;
 
-        public InfoSelectorMenu(MenuManager manager, InfoMenu controlsMenu, InfoMenu instructionsMenu, InfoMenu scoringMenu)
-            : base(manager)
+        protected override void WireButtons()
         {
-            _controlsMenu = controlsMenu;
-            _instructionsMenu = instructionsMenu;
-            _scoringMenu = scoringMenu;
+            controlsButton.onClick.AddListener(GoToControlsMenu);
+            instructionsButton.onClick.AddListener(GoToInstructionsMenu);
+            scoringButton.onClick.AddListener(GoToScoringMenu);
+            backButton.onClick.AddListener(Back);
+        }
+        
+        protected override void UnwireButtons()
+        {
+            controlsButton.onClick.RemoveListener(GoToControlsMenu);
+            instructionsButton.onClick.RemoveListener(GoToInstructionsMenu);
+            scoringButton.onClick.RemoveListener(GoToScoringMenu);
+            backButton.onClick.RemoveListener(Back);
         }
 
         public void GoToControlsMenu()
         {
-            Manager.Select(_controlsMenu);
+            manager.Select(controlsMenu);
         }
         
         public void GoToInstructionsMenu()
         {
-            Manager.Select(_instructionsMenu);
+            manager.Select(instructionsMenu);
         }
         
         public void GoToScoringMenu()
         {
-            Manager.Select(_scoringMenu);
+            manager.Select(scoringMenu);
         }
     }
 }
