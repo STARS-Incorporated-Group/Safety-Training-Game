@@ -13,6 +13,7 @@ namespace Backend.Menu
         [SerializeField] protected Transform            head;
         [SerializeField] protected float                spawnDistance = 2f;
         [SerializeField] protected GameObject           menu;
+        [SerializeField] protected GameObject           parent;
         [SerializeField] protected InputActionReference showAction;
 
         protected virtual void Initialize(MenuManager menuManager)

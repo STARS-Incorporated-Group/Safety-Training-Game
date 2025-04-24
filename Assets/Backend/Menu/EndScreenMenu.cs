@@ -10,7 +10,7 @@ namespace Backend.Menu
     public class EndScreenMenu: AbstractMenu
     {
         [Header("Configure Logic (assign in Inspector)")]
-        [SerializeField] protected MainMenu mainMenu;
+        [SerializeField] protected GameObject mainMenuGameObject;
         
         [Header("UI Buttons (assign in Inspector)")]
         [SerializeField] protected Button replayButton;
@@ -18,6 +18,14 @@ namespace Backend.Menu
 
         [Header("Configure Events (assign in Inspector)")] 
         [SerializeField] protected UnityEvent replayEvent;
+        
+        private MainMenu _mainMenu;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _mainMenu = mainMenuGameObject.GetComponent<MainMenu>();
+        }
 
         protected override void WireButtons()
         {
@@ -33,7 +41,7 @@ namespace Backend.Menu
         
         public void GoToMainMenu()
         {
-            manager.SelectRoot(mainMenu);
+            manager.SelectRoot(_mainMenu);
         }
 
         public void Replay()

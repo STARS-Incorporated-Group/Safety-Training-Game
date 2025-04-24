@@ -8,15 +8,27 @@ namespace Backend.Menu
     public class MainMenu : AbstractMenu
     {
         [Header("Configure Logic (assign in Inspector)")]
-        [SerializeField] protected SettingsMenu      settingsMenu;
-        [SerializeField] protected InfoSelectorMenu  infoMenu;
-        [SerializeField] protected RoomSelectionMenu roomSelectionMenu;
+        [SerializeField] protected GameObject settingsMenuGameObject;
+        [SerializeField] protected GameObject infoMenuGameObject;
+        [SerializeField] protected GameObject roomSelectionMenuGameObject;
         
         [Header("UI Buttons (assign in Inspector)")]
         [SerializeField] protected Button settingsButton;
         [SerializeField] protected Button infoButton;
         [SerializeField] protected Button roomButton;
         
+        private SettingsMenu      _settingsMenu;
+        private InfoSelectorMenu  _infoMenu;
+        private RoomSelectionMenu _roomSelectionMenu;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _settingsMenu = settingsMenuGameObject.GetComponent<SettingsMenu>();
+            _infoMenu = infoMenuGameObject.GetComponent<InfoSelectorMenu>();
+            _roomSelectionMenu = roomSelectionMenuGameObject.GetComponent<RoomSelectionMenu>();
+        }
+
         protected override void WireButtons()
         {
             settingsButton.onClick.AddListener(GoToSettingsMenu);
@@ -33,17 +45,17 @@ namespace Backend.Menu
 
         public void GoToRoomSelectionMenu()
         {
-            manager.Select(roomSelectionMenu);
+            manager.Select(_roomSelectionMenu);
         }
 
         public void GoToSettingsMenu()
         {
-            manager.Select(settingsMenu);
+            manager.Select(_settingsMenu);
         }
 
         public void GoToInfoMenu()
         {
-            manager.Select(infoMenu);
+            manager.Select(_infoMenu);
         }
 
         public override void Back()

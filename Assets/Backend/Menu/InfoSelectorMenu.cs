@@ -8,15 +8,27 @@ namespace Backend.Menu
     public class InfoSelectorMenu: AbstractMenu
     {
         [Header("Configure Logic (assign in Inspector)")]
-        [SerializeField] protected InfoMenu controlsMenu;
-        [SerializeField] protected InfoMenu instructionsMenu;
-        [SerializeField] protected InfoMenu scoringMenu;
+        [SerializeField] protected GameObject controlsMenuGameObject;
+        [SerializeField] protected GameObject instructionsMenuGameObject;
+        [SerializeField] protected GameObject scoringMenuGameObject;
         
         [Header("UI Buttons (assign in Inspector)")]
         [SerializeField] protected Button controlsButton;
         [SerializeField] protected Button instructionsButton;
         [SerializeField] protected Button scoringButton;
         [SerializeField] protected Button backButton;
+        
+        private InfoMenu _controlsMenu;
+        private InfoMenu _instructionsMenu;
+        private InfoMenu _scoringMenu;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _controlsMenu = controlsMenuGameObject.GetComponent<InfoMenu>();
+            _instructionsMenu = instructionsMenuGameObject.GetComponent<InfoMenu>();
+            _scoringMenu = scoringMenuGameObject.GetComponent<InfoMenu>();
+        }
 
         protected override void WireButtons()
         {
@@ -36,17 +48,17 @@ namespace Backend.Menu
 
         public void GoToControlsMenu()
         {
-            manager.Select(controlsMenu);
+            manager.Select(_controlsMenu);
         }
         
         public void GoToInstructionsMenu()
         {
-            manager.Select(instructionsMenu);
+            manager.Select(_instructionsMenu);
         }
         
         public void GoToScoringMenu()
         {
-            manager.Select(scoringMenu);
+            manager.Select(_scoringMenu);
         }
     }
 }

@@ -7,15 +7,24 @@ namespace Backend.Menu
     [RequireComponent(typeof(Canvas))]
     public class InfoMenu: AbstractMenu
     {
-        
         [Header("Configure Logic (assign in Inspector)")]
-        [SerializeField] protected InfoMenu previousMenu;
-        [SerializeField] protected InfoMenu nextMenu;
+        [SerializeField] protected GameObject previousMenuObject;
+        [SerializeField] protected GameObject nextMenuObject;
         
         [Header("UI Buttons (assign in Inspector)")]
         [SerializeField] protected Button nextButton;
         [SerializeField] protected Button previousButton;
         [SerializeField] protected Button backButton;
+    
+        private InfoMenu _previousMenu;
+        private InfoMenu _nextMenu;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _previousMenu = previousMenuObject.GetComponent<InfoMenu>();
+            _nextMenu = nextMenuObject.GetComponent<InfoMenu>();
+        }
 
         protected override void WireButtons()
         {
@@ -33,17 +42,17 @@ namespace Backend.Menu
         
         public void Next()
         {
-            if (nextMenu != null)
+            if (_nextMenu != null)
             {
-                manager.OverwriteCurrentMenu(nextMenu);
+                manager.OverwriteCurrentMenu(_nextMenu);
             }
         }
 
         public void Previous()
         {
-            if (previousMenu != null)
+            if (_previousMenu != null)
             {
-                manager.OverwriteCurrentMenu(previousMenu);
+                manager.OverwriteCurrentMenu(_previousMenu);
             }
         }
     }

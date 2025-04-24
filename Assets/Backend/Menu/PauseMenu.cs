@@ -9,10 +9,11 @@ namespace Backend.Menu
     [RequireComponent(typeof(Canvas))]
     public class PauseMenu: AbstractMenu
     {
+        
         [Header("Configure Logic (assign in Inspector)")]
-        [SerializeField] protected SettingsMenu     settingsMenu;
-        [SerializeField] protected InfoSelectorMenu infoMenu;
-        [SerializeField] protected MainMenu         mainMenu;
+        [SerializeField] protected GameObject settingsMenuGameObject;
+        [SerializeField] protected GameObject infoMenuGameObject;
+        [SerializeField] protected GameObject mainMenuObGameObject;
         
         [Header("UI Buttons (assign in Inspector)")]
         [SerializeField] protected Button resumeButton;
@@ -25,6 +26,18 @@ namespace Backend.Menu
         [SerializeField] protected UnityEvent restartEvent;
         [SerializeField] protected UnityEvent resumeEvent;
         
+        private SettingsMenu     _settingsMenu;
+        private InfoSelectorMenu _infoMenu;
+        private MainMenu         _mainMenu;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _infoMenu = infoMenuGameObject.GetComponent<InfoSelectorMenu>();
+            _settingsMenu = settingsMenuGameObject.GetComponent<SettingsMenu>();
+            _mainMenu = mainMenuObGameObject.GetComponent<MainMenu>();
+        }
+
         protected override void WireButtons()
         {
             resumeButton.onClick.AddListener(ResumeGame);
@@ -45,17 +58,17 @@ namespace Backend.Menu
         
         public void GoToSettingsMenu()
         {
-            manager.Select(settingsMenu);
+            manager.Select(_settingsMenu);
         }
         
         public void GoToInfoMenu()
         {
-            manager.Select(infoMenu);
+            manager.Select(_infoMenu);
         }
         
         public void GoToMainMenu()
         {
-            manager.Select(mainMenu);
+            manager.Select(_mainMenu);
         }
         
         public virtual void RestartLevel()
@@ -66,7 +79,7 @@ namespace Backend.Menu
         
         public virtual void ExitLevel()
         {
-            manager.SelectRoot(mainMenu);
+            manager.SelectRoot(_mainMenu);
         }
         
         public virtual void ResumeGame()
