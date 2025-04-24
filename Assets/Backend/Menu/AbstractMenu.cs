@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 namespace Backend.Menu
 {
     [RequireComponent(typeof(Canvas))]
-    public abstract class AbstractMenu : MonoBehaviour
+    public abstract class AbstractMenu : ScriptableObject
     {
         protected MenuManager manager { get; private set; }
         private bool _active;
