@@ -1,29 +1,49 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 namespace Backend.Menu
 {
+    [RequireComponent(typeof(Canvas))]
     public class InfoMenu: AbstractMenu
     {
-        protected InfoMenu previousPage { get; private set; }
-        protected InfoMenu nextPage { get; private set; }
+        
+        [Header("Configure Logic (assign in Inspector)")]
+        [SerializeField] protected InfoMenu previousMenu;
+        [SerializeField] protected InfoMenu nextMenu;
+        
+        [Header("UI Buttons (assign in Inspector)")]
+        [SerializeField] protected Button nextButton;
+        [SerializeField] protected Button previousButton;
+        [SerializeField] protected Button backButton;
 
-        public void Configure(InfoMenu previousPage, InfoMenu nextPage)
+        protected override void WireButtons()
         {
-            this.previousPage = previousPage;
-            this.nextPage = nextPage;
+            nextButton.onClick.AddListener(Next);
+            previousButton.onClick.AddListener(Previous);
+            backButton.onClick.AddListener(Back);
         }
-
+        
+        protected override void UnwireButtons()
+        {
+            nextButton.onClick.RemoveListener(Next);
+            previousButton.onClick.RemoveListener(Previous);
+            backButton.onClick.RemoveListener(Back);
+        }
+        
         public void Next()
         {
-            if (nextPage != null)
+            if (nextMenu != null)
             {
-                manager.OverwriteCurrentMenu(nextPage);
+                manager.OverwriteCurrentMenu(nextMenu);
             }
         }
 
         public void Previous()
         {
-            if (previousPage != null)
+            if (previousMenu != null)
             {
-                manager.OverwriteCurrentMenu(previousPage);
+                manager.OverwriteCurrentMenu(previousMenu);
             }
         }
     }

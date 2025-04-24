@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Backend.Menu
 {
+    [RequireComponent(typeof(Canvas))]
     public abstract class AbstractMenu : MonoBehaviour
     {
         protected MenuManager manager { get; private set; }
