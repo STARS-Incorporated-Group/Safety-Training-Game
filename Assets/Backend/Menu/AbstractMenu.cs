@@ -14,7 +14,6 @@ namespace Backend.Menu
         [SerializeField] protected float                spawnDistance = 2f;
         [SerializeField] protected GameObject           menu;
         [SerializeField] protected GameObject           parent;
-        [SerializeField] protected InputActionReference showAction;
 
         protected virtual void Initialize(MenuManager menuManager)
         {
@@ -31,9 +30,6 @@ namespace Backend.Menu
             // 2) Hide on start
             _active = false;
             menu.SetActive(false);
-
-            // 3) Hook the pause/show input
-            showAction.action.performed += OnShowAction;
             
             // 4) Give subclasses a chance to hook their buttons
             WireButtons();
@@ -53,20 +49,9 @@ namespace Backend.Menu
         {
         }
 
-
-        protected virtual void OnEnable()  => showAction.action.Enable();
-        protected virtual void OnDisable() => showAction.action.Disable();
-
         protected virtual void OnDestroy()
         {
-            showAction.action.performed -= OnShowAction;
             UnwireButtons();
-        }
-
-        private void OnShowAction(InputAction.CallbackContext ctx)
-        {
-            if (_active) Close();
-            else        Load();
         }
 
         public virtual void Load()
