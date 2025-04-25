@@ -8,8 +8,8 @@ namespace Backend.Menu
     public class InfoMenu: AbstractMenu
     {
         [Header("Configure Logic (assign in Inspector)")]
-        [SerializeField] protected GameObject previousMenuObject;
-        [SerializeField] protected GameObject nextMenuObject;
+        [SerializeField] protected GameObject previousMenuGameObject;
+        [SerializeField] protected GameObject nextMenuGameObject;
         
         [Header("UI Buttons (assign in Inspector)")]
         [SerializeField] protected Button nextButton;
@@ -22,8 +22,14 @@ namespace Backend.Menu
         protected override void Awake()
         {
             base.Awake();
-            _previousMenu = previousMenuObject.GetComponent<InfoMenu>();
-            _nextMenu = nextMenuObject.GetComponent<InfoMenu>();
+            if (previousMenuGameObject != null) 
+            {
+                _previousMenu = previousMenuGameObject.GetComponent<InfoMenu>();
+            }
+            if (nextMenuGameObject != null)
+            {
+                _nextMenu = nextMenuGameObject.GetComponent<InfoMenu>();
+            }
         }
 
         protected override void WireButtons()
