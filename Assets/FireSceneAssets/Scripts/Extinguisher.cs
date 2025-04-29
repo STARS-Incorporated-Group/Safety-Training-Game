@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Extinguisher : MonoBehaviour
 {
+    [SerializeField] private float amountExtinguishedPerSecond = 0.1f;
     
     private void Update()
     {
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 100f))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 100f)
+            && hit.collider.TryGetComponent(out Fire fire))
         {
-            print(hit.collider.name);
+            fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
         }
     }
 }
