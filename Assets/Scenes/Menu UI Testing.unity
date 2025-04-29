@@ -2698,9 +2698,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 0}
   spawnDistance: 2
-  menu: {fileID: 0}
-  parent: {fileID: 0}
-  showAction: {fileID: 0}
+  menu: {fileID: 595372895}
+  parent: {fileID: 1348314837}
   settingsMenuGameObject: {fileID: 0}
   infoMenuGameObject: {fileID: 0}
   mainMenuObGameObject: {fileID: 0}
@@ -5507,7 +5506,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459959133}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73365369798f49c080f0dc70a6bf722a, type: 3}
   m_Name: 
@@ -5515,13 +5514,12 @@ MonoBehaviour:
   head: {fileID: 0}
   spawnDistance: 2
   menu: {fileID: 1459959133}
-  parent: {fileID: 0}
-  showAction: {fileID: 0}
-  previousMenuObject: {fileID: 0}
-  nextMenuObject: {fileID: 0}
-  nextButton: {fileID: 0}
-  previousButton: {fileID: 0}
-  backButton: {fileID: 0}
+  parent: {fileID: 1348314837}
+  previousMenuGameObject: {fileID: 1646444272}
+  nextMenuGameObject: {fileID: 1834622087}
+  nextButton: {fileID: 18431572}
+  previousButton: {fileID: 1323858177}
+  backButton: {fileID: 1969041456}
 --- !u!1 &1537918505
 GameObject:
   m_ObjectHideFlags: 0
