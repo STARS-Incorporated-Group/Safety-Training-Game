@@ -2054,6 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d2db67dfa484d229e843c5078a92c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amountExtinguishedPerSecond: 0.1
 --- !u!198 &779115972 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1919863947656351931, guid: 6395c071d99594cb4a3bae719774fbde, type: 3}
