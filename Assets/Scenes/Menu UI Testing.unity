@@ -5251,7 +5251,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 8735312547844097991, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  active: 0
 --- !u!1 &1442703038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,13 +6428,14 @@ GameObject:
   - component: {fileID: 1834622091}
   - component: {fileID: 1834622090}
   - component: {fileID: 1834622089}
+  - component: {fileID: 1834622092}
   m_Layer: 5
   m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1834622088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6526,6 +6526,27 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1834622092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834622087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73365369798f49c080f0dc70a6bf722a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 0}
+  spawnDistance: 2
+  menu: {fileID: 1834622087}
+  parent: {fileID: 1348314837}
+  previousMenuGameObject: {fileID: 0}
+  nextMenuGameObject: {fileID: 0}
+  nextButton: {fileID: 0}
+  previousButton: {fileID: 0}
+  backButton: {fileID: 0}
 --- !u!1 &1919390940
 GameObject:
   m_ObjectHideFlags: 0
