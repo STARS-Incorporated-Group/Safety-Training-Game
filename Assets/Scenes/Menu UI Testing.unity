@@ -2701,12 +2701,12 @@ MonoBehaviour:
   menu: {fileID: 595372895}
   parent: {fileID: 1348314837}
   settingsMenuGameObject: {fileID: 0}
-  infoMenuGameObject: {fileID: 0}
+  infoMenuGameObject: {fileID: 1834622087}
   mainMenuObGameObject: {fileID: 0}
   resumeButton: {fileID: 0}
   restartButton: {fileID: 96977390}
   settingsButton: {fileID: 0}
-  infoButton: {fileID: 1973148018}
+  infoButton: {fileID: 2028303378}
   exitButton: {fileID: 689605685}
   restartEvent:
     m_PersistentCalls:
