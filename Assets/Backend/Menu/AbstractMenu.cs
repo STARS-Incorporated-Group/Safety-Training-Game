@@ -84,17 +84,10 @@ namespace Backend.Menu
         protected virtual void UpdateVisibility()
         {
             // show/hide + position logic
-<<<<<<< Updated upstream
             /*if (menu.activeSelf != _active)
             {
                 menu.SetActive(_active);
             }*/
-=======
-            // if (menu.activeSelf != _active)
-            // {
-            //     menu.SetActive(_active);
-            // }
->>>>>>> Stashed changes
 
             if (_active)
             {
