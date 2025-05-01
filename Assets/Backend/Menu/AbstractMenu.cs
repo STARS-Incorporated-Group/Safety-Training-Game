@@ -49,7 +49,6 @@ namespace Backend.Menu
         {
         }
 
-
         protected virtual void OnEnable()  => Load();
         protected virtual void OnDisable() => Close();
 
@@ -60,12 +59,16 @@ namespace Backend.Menu
 
         public virtual void Load()
         {
+            menu.SetActive(true);
             _active = true;
+            menu.SetActive(true);
         }
 
         public virtual void Close()
         {
+            menu.SetActive(false);
             _active = false;
+            menu.SetActive(false);
         }
 
         public virtual void Back()
@@ -73,7 +76,7 @@ namespace Backend.Menu
             manager.Back();
         }
 
-        private void Update()
+        protected void Update()
         {
             UpdateVisibility();
         }
@@ -81,10 +84,10 @@ namespace Backend.Menu
         protected virtual void UpdateVisibility()
         {
             // show/hide + position logic
-            if (menu.activeSelf != _active)
+            /*if (menu.activeSelf != _active)
             {
                 menu.SetActive(_active);
-            }
+            }*/
 
             if (_active)
             {
