@@ -63,6 +63,9 @@ namespace Backend.Menu
         
         public void GoToInfoMenu()
         {
+            var cb = infoButton.colors;
+            cb.pressedColor = Color.cyan;
+            infoButton.colors = cb;
             manager.Select(_infoMenu);
         }
         
