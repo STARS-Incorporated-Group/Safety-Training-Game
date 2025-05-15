@@ -63,8 +63,9 @@ namespace Backend.Menu
         
         public void GoToInfoMenu()
         {
-            Debug.Log("Pressed");
-            infoButton.GetComponent<Text>().text = "Pressed";
+            var cb = infoButton.colors;
+            cb.pressedColor = Color.cyan;
+            infoButton.colors = cb;
             manager.Select(_infoMenu);
         }
         
