@@ -3424,6 +3424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a284bb25b752499caceca94eaa8c65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterStreamPrefab: {fileID: 1302867150751719776, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
+  spraySpawnPoint: {fileID: 2195202397058586018}
 --- !u!1001 &5928222717078554133
 PrefabInstance:
   m_ObjectHideFlags: 0
