@@ -49,7 +49,6 @@ namespace Backend.Menu
         {
         }
 
-
         protected virtual void OnEnable()  => Load();
         protected virtual void OnDisable() => Close();
 
@@ -62,12 +61,14 @@ namespace Backend.Menu
         {
             menu.SetActive(true);
             _active = true;
+            menu.SetActive(true);
         }
 
         public virtual void Close()
         {
             menu.SetActive(false);
             _active = false;
+            menu.SetActive(false);
         }
 
         public virtual void Back()
