@@ -27,12 +27,12 @@ namespace Backend.Menu
         {
             Initialize(MenuManager.GlobalManager);
 
-            // 2) Hide on start
-            _active = false;
-            menu.SetActive(false);
-            
             // 3) Give subclasses a chance to hook their buttons
             WireButtons();
+
+            // 2) Hide on start
+            _active = true;
+            menu.SetActive(true);
         }
 
         /// <summary>
@@ -61,14 +61,12 @@ namespace Backend.Menu
         {
             menu.SetActive(true);
             _active = true;
-            menu.SetActive(true);
         }
 
         public virtual void Close()
         {
             menu.SetActive(false);
             _active = false;
-            menu.SetActive(false);
         }
 
         public virtual void Back()

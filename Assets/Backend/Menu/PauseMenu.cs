@@ -63,6 +63,8 @@ namespace Backend.Menu
         
         public void GoToInfoMenu()
         {
+            Debug.Log("Pressed");
+            infoButton.GetComponent<Text>().text = "Pressed";
             manager.Select(_infoMenu);
         }
         
