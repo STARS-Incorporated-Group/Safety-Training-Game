@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class SprayHose : MonoBehaviour
 {
 
-    public Transform spraySpawnPoint;
     public GameObject waterStreamPrefab;
-    public GameObject waterStreamSpawnPoint;
-
+    // public GameObject waterStreamSpawnPoint;
+    // public Transform spraySpawnPoint = waterStreamSpawnPoint.Transform;
+    public Transform spraySpawnPoint;
+    
+    private GameObject waterStreamInstance;        // The active stream instance
     private bool isSpraying = false;
 
     // Start is called before the first frame update
@@ -25,25 +28,14 @@ public class SprayHose : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Once Button A on the Oculus Quest 3's XR Controller (A Button) is pressed, enable the water stream object
-        
-        // Check if A button is pressed on the right controller
-        if (Gamepad.current != null)
+        InputDevice rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+
+        if (rightHand.isValid)
         {
-            // Optional: fallback for regular Gamepad testing
-            isSpraying = Gamepad.current.buttonSouth.isPressed; // "A" on Xbox
-        }
-        else
-        {
-            var rightHand = InputSystem.GetDevice<UnityEngine.InputSystem.XR.XRController>(CommonUsages.RightHand);
-            if (rightHand != null)
+            bool thumbstickPressed = false;
+            if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out thumbstickPressed))
             {
-                InputDevice device = rightHand;
-                bool aButtonValue;
-                if (device.TryGetFeatureValue(CommonUsages.primaryButton, out aButtonValue))
-                {
-                    isSpraying = aButtonValue;
-                }
+                isSpraying = thumbstickPressed;
             }
         }
 
