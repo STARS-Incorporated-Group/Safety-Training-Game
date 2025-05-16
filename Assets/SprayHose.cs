@@ -10,6 +10,9 @@ public class SprayHose : MonoBehaviour
     // public GameObject waterStreamSpawnPoint;
     // public Transform spraySpawnPoint = waterStreamSpawnPoint.Transform;
     public Transform spraySpawnPoint;
+
+    public GameObject waterStreamObject;
+
     
     private GameObject waterStreamInstance;        // The active stream instance
     private bool isSpraying = false;
@@ -21,8 +24,10 @@ public class SprayHose : MonoBehaviour
         // Hide it (make it not there until activated)
 
         // Instantiate and deactivate the water stream at start
-        waterStreamInstance = Instantiate(waterStreamPrefab, spraySpawnPoint.position, spraySpawnPoint.rotation, spraySpawnPoint);
-        waterStreamInstance.SetActive(false);
+        // waterStreamInstance = Instantiate(waterStreamPrefab, spraySpawnPoint.position, spraySpawnPoint.rotation, spraySpawnPoint);
+        // waterStreamInstance.SetActive(false);
+
+        waterStreamInstance.SetActive(true); // change to false
     }
 
     // Update is called once per frame
@@ -36,12 +41,13 @@ public class SprayHose : MonoBehaviour
             if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out thumbstickPressed))
             {
                 isSpraying = thumbstickPressed;
+                print(isSpraying);
             }
         }
 
         if (waterStreamInstance != null)
         {
-            waterStreamInstance.SetActive(isSpraying);
+            // waterStreamInstance.SetActive(isSpraying); // todo
         }
     }
 }
