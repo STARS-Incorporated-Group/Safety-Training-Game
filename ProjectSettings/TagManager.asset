@@ -17,9 +17,9 @@ TagManager:
   - Interactable
   - Interactable Ignore Ray
   - Body
-  - 
-  - 
-  - 
+  - door
+  - table
+  - table handle
   - 
   - 
   - 

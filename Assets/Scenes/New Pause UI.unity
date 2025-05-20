@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3861,7 +3861,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1660039125}
   crouchThreshold: 1.2
-  isCrouching: 0
+  crouchScale: {x: 0.4, y: 0.4, z: 0.4}
+  normalScale: {x: 1, y: 1, z: 1}
+  scaleSmoothSpeed: 5
 --- !u!1 &1275350391
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,7 +4192,7 @@ MonoBehaviour:
       m_Name: Show Button
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 5a855863-9e02-4abc-9581-8a3cdc696402
+      m_Id: 9ee83781-582f-41d1-85b1-a50f21655d24
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
