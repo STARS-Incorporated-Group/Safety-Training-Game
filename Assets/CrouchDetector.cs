@@ -3,27 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-
-
-
 public class CrouchDetector : MonoBehaviour
 {
     public Camera mainCamera; // Assign this manually in the Inspector
-    public float crouchThreshold = 1.2f; // Adjust threshold for crouching
-    public bool isCrouching; // { get; private set; } // Read-only outside this class
-   
+    public float crouchThreshold = 0.2f; // Difference in height to consider as crouch
+    public Vector3 crouchScale = new Vector3(0.4f, 0.4f, 0.4f);
+    public Vector3 normalScale = Vector3.one;
+    public float scaleSmoothSpeed = 5f; // Higher = faster transitions
 
+    public bool isCrouching { get; private set; }
 
-    private Transform headTransform; // Stores the transform of the camera
-
+    private Transform headTransform;
+    private float startHeight;
+    private Vector3 targetScale;
 
     void Start()
     {
-        UnityEngine.Debug.unityLogger.logEnabled = true;
-
-
-        UnityEngine.Debug.Log("Test message: The script has started!");
-
+        Debug.Log("CrouchDetector initialized.");
 
         if (mainCamera == null)
         {
@@ -41,24 +37,36 @@ public class CrouchDetector : MonoBehaviour
             }
         }
 
-
         headTransform = mainCamera.transform;
+        startHeight = headTransform.position.y;
+        targetScale = transform.localScale; // Initialize to current scale
     }
-
 
     void Update()
     {
-        if (headTransform != null)
-        {
-            float headHeight = headTransform.position.y;
-            isCrouching = headHeight < crouchThreshold;
-
-            Debug.Log($"Current Headset Height: {headHeight}, Crouching: {isCrouching}");
-        }
-        else
+        if (headTransform == null)
         {
             Debug.LogError("HeadTransform is null! Ensure the Main Camera is assigned.");
+            return;
         }
+
+        float headHeight = headTransform.position.y;
+        bool crouchDetected = headHeight < startHeight - crouchThreshold;
+
+        if (crouchDetected && !isCrouching)
+        {
+            isCrouching = true;
+            targetScale = crouchScale;
+            Debug.Log("Crouch detected. Scaling down.");
+        }
+        else if (!crouchDetected && isCrouching)
+        {
+            isCrouching = false;
+            targetScale = normalScale;
+            Debug.Log("Standing detected. Scaling up.");
+        }
+
+        // Smooth transition
+        transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * scaleSmoothSpeed);
     }
 }
-
