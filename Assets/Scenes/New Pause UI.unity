@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4183,19 +4183,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 1660039122}
   spawnDistance: 2
-  menu: {fileID: 595372895}
-  showButton:
-    m_UseReference: 1
+  menuRootObject: {fileID: 0}
+  toggleMenuButton:
+    m_UseReference: 0
     m_Action:
-      m_Name: Show Button
+      m_Name: Toggle Menu Button
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 5a855863-9e02-4abc-9581-8a3cdc696402
+      m_Id: 661a6636-724a-476f-bd51-c3a74179e67c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 8735312547844097991, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
+  pauseMenuCanvas: {fileID: 0}
+  controlsMenuCanvas: {fileID: 0}
+  instructionsMenuCanvas: {fileID: 0}
 --- !u!1 &1442703038
 GameObject:
   m_ObjectHideFlags: 0
