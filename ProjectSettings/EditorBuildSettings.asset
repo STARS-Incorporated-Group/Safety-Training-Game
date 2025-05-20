@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/EarthQuakeScene.unity
     guid: 94ba4a8425672f940a9be3a685c98a06
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu UI Testing.unity
     guid: 5967b9f5c2f94f444b2c71374334a6ac
   - enabled: 0
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main Menu Scene.unity
     guid: a61219bb0fb6873459d69738e417c090
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/New Pause UI.unity
     guid: 4537078d89b95f745b32ea31cd50bac3
   m_configObjects:

@@ -4736,7 +4736,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1660039125}
   crouchThreshold: 1.2
-  isCrouching: 0
+  crouchScale: {x: 0.4, y: 0.4, z: 0.4}
+  normalScale: {x: 1, y: 1, z: 1}
+  scaleSmoothSpeed: 5
 --- !u!1 &1241329289
 GameObject:
   m_ObjectHideFlags: 0
@@ -5439,9 +5441,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 1660039122}
   spawnDistance: 2
-  menu: {fileID: 0}
+  menu: {fileID: 595372895}
   showButton:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Show Button
       m_Type: 0
@@ -5451,7 +5453,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 8735312547844097991, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &1348314840
 MonoBehaviour:
   m_ObjectHideFlags: 0
