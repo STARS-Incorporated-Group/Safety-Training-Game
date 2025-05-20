@@ -36,6 +36,8 @@ public class Fire : MonoBehaviour
 
     public bool TryExtinguish (float amount)
     {
+        // if(isSpraying == true) {
+
         timeLastWatered = Time.time;
         currentIntensity -= amount;
         ChangeIntensity();
@@ -45,6 +47,7 @@ public class Fire : MonoBehaviour
             isLit = false;
             return true;
         }
+        // }
 
         return false; // fire is still lit
     }

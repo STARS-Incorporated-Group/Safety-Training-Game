@@ -1936,6 +1936,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountExtinguishedPerSecond: 0.1
+  isSpraying: 0
+  extinguisherStreamTransform: {fileID: 0}
 --- !u!198 &779115972 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1919863947656351931, guid: 6395c071d99594cb4a3bae719774fbde, type: 3}
@@ -2620,15 +2622,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.19999984
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.19999988
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.19999988
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2681,7 +2683,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1302867150751719776, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1538917135}
+    - targetCorrespondingSourceObject: {fileID: 1302867150751719776, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1538917138}
   m_SourcePrefab: {fileID: 100100000, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
 --- !u!4 &1538917133 stripped
 Transform:
@@ -2693,6 +2701,42 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1302867150751719776, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
   m_PrefabInstance: {fileID: 1538917132}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1538917135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538917134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d2db67dfa484d229e843c5078a92c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountExtinguishedPerSecond: 0.1
+  isSpraying: 0
+  extinguisherStreamTransform: {fileID: 1538917133}
+--- !u!65 &1538917138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538917134}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.000019999998, y: 0.000020000005, z: 0.000020000005}
+  m_Center: {x: -0.000000029802322, y: -0.000000059604645, z: 0.000000059604645}
 --- !u!1 &1575339656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,7 +3190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21674a2085e4a414e97eab01073c4e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentIntensity: 1
+  currentIntensity: 0.5
   regenDelay: 2.5
   regenRate: 0.1
   fireParticleSystems:
@@ -3411,9 +3455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a284bb25b752499caceca94eaa8c65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterStreamPrefab: {fileID: 1302867150751719776, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
   spraySpawnPoint: {fileID: 2195202397058586018}
   waterStreamObject: {fileID: 1538917134}
+  isSpraying: 0
 --- !u!1001 &5928222717078554133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3681,5 +3725,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.5
+  m_Radius: 2
   m_Center: {x: 0.003870964, y: -0.2547027, z: 0.013806701}

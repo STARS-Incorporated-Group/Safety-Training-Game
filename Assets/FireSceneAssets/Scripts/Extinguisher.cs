@@ -5,11 +5,21 @@ using UnityEngine;
 public class Extinguisher : MonoBehaviour
 {
     [SerializeField] private float amountExtinguishedPerSecond = 0.1f;
+
+    public bool isSpraying;
+
+    public Transform extinguisherStreamTransform;
+
+    Fire fire;
+
+
     
     private void Update()
     {
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 100f)
-            && hit.collider.TryGetComponent(out Fire fire))
+        // if (Physics.Raycast(extinguisherStreamTransform.position, extinguisherStreamTransform.forward, out RaycastHit hit, 100f)
+        //     && hit.collider.TryGetComponent(out Fire fire) && isSpraying)
+        
+        if (isSpraying)
         {
             fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
         }

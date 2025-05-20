@@ -6,16 +6,17 @@ using UnityEngine.XR;
 public class SprayHose : MonoBehaviour
 {
 
-    public GameObject waterStreamPrefab;
+    // public GameObject waterStreamPrefab;
     // public GameObject waterStreamSpawnPoint;
     // public Transform spraySpawnPoint = waterStreamSpawnPoint.Transform;
     public Transform spraySpawnPoint;
 
     public GameObject waterStreamObject;
 
+    public bool isSpraying = true;
+
     
-    private GameObject waterStreamInstance;        // The active stream instance
-    private bool isSpraying = false;
+    // private GameObject waterStreamInstance;        // The active stream instance
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class SprayHose : MonoBehaviour
         // waterStreamInstance = Instantiate(waterStreamPrefab, spraySpawnPoint.position, spraySpawnPoint.rotation, spraySpawnPoint);
         // waterStreamInstance.SetActive(false);
 
-        waterStreamInstance.SetActive(true); // change to false
+        waterStreamObject.SetActive(false); // change to false
     }
 
     // Update is called once per frame
@@ -45,9 +46,11 @@ public class SprayHose : MonoBehaviour
             }
         }
 
-        if (waterStreamInstance != null)
-        {
-            // waterStreamInstance.SetActive(isSpraying); // todo
-        }
+        waterStreamObject.SetActive(isSpraying);
+
+        // if (waterStreamInstance != null)
+        // {
+        //     // waterStreamInstance.SetActive(isSpraying); // todo
+        // }
     }
 }
