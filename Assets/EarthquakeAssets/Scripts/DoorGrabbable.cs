@@ -21,7 +21,7 @@ public class DoorGrabbable : XRGrabInteractable
     {
         if(Vector3.Distance(handler.position, transform.position) > 0.4f)
         {
-            GetComponent<XRBaseInteractor>().enableInteractions = false;
+            GetComponent<XRBaseInteractor>().allowSelect = false;
         }
     }
 }

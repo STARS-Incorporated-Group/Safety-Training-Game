@@ -6,9 +6,9 @@ using UnityEngine.XR;
 public class CrouchDetector : MonoBehaviour
 {
     public Camera mainCamera; // Assign this manually in the Inspector
-    public float crouchThreshold = 0.2f; // Difference in height to consider as crouch
-    public Vector3 crouchScale = new Vector3(0.4f, 0.4f, 0.4f);
-    public Vector3 normalScale = new Vector3(1.25f, 1.25f, 1.25f);
+    public float crouchThreshold = 0.05f; // Difference in height to consider as crouch
+    public Vector3 crouchScale = new Vector3(1.25f, 0.4f, 1.25f);
+    public Vector3 normalScale = new Vector3(1.25f, 2f, 1.25f);
     public float scaleSmoothSpeed = 5f; // Higher = faster transitions
 
     public bool isCrouching { get; private set; }

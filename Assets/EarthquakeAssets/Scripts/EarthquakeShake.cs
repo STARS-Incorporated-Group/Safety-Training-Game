@@ -5,36 +5,29 @@ public class EarthquakeShake : MonoBehaviour
 {
     private float initialShakeIntensity = 0f;  // Starting intensity
     public float maxShakeIntensity = 20f;     // Maximum intensity
-    private float intensityIncreaseDuration = 45f; // Time (in seconds) to reach max intensity and back to 0
+    private float intensityIncreaseDuration = 30f; // Time (in seconds) to reach max intensity and back to 0
     private float intensityDecreaseDuration = 15f;
-    private float startDelay = 0f;             // Delay (in seconds) before shaking starts
+    private float startDelay = 10f;             // Delay (in seconds) before shaking starts
     private int frequency = 5;                 // Frequency for shaking
 
-    public AnimationCurve shakeDistribution; // AnimationCurve for controlling randomness
+    public AnimationCurve shakeDistribution;   // AnimationCurve for controlling randomness
 
-    private Rigidbody rb;                    // Reference to the Rigidbody
+    private Rigidbody rb;                      // Reference to the Rigidbody
     private int counter = 0;
-    private float elapsedTime = 0f;          // Tracks time since shaking started
-    public float shakeIntensity = 0f;       // Current intensity
-    private float gameStartTime;             // Tracks the time the game starts
+    private float elapsedTime = 0f;            // Tracks time since shaking started
+    public float shakeIntensity = 0f;          // Current intensity
+    private float gameStartTime;               // Tracks the time the game starts
 
-    private int collisionCount = 0;          // Tracks number of colliding objects
-    private bool isIncreasing = true;        // Controls intensity increase/decrease
+    private int collisionCount = 0;            // Tracks number of colliding objects
+    private bool isIncreasing = true;          // Controls intensity increase/decrease
 
     private XRGrabInteractable grabInteractable;
-    private bool isBeingHeld = false;
+    private int climbCount = 0;       // New: track climbing state
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         gameStartTime = Time.time;
-
-        grabInteractable = GetComponent<XRGrabInteractable>();
-        if (grabInteractable != null)
-        {
-            grabInteractable.selectEntered.AddListener(OnGrab);
-            grabInteractable.selectExited.AddListener(OnRelease);
-        }
     }
 
     void OnCollisionEnter(Collision other)
@@ -49,12 +42,38 @@ public class EarthquakeShake : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Time.time < gameStartTime + startDelay || collisionCount == 0 || isBeingHeld)
+
+        if (Time.time < gameStartTime + startDelay)
         {
             return;
         }
+        // Skip shaking if it's not time yet, not colliding, being held, or being climbed
+        if (collisionCount == 0 || climbCount > 0)
+        {
+            // Still update elapsed time and intensity to stay in sync
+            UpdateShakeIntensity();
+            return;
+        }
 
-        // Adjust intensity over time
+        // Update elapsed time and calculate current intensity
+        UpdateShakeIntensity();
+
+        counter++;
+        if (counter >= frequency)
+        {
+            float randomValue = Random.value; // Random value between 0 and 1
+            float curveValue = shakeDistribution.Evaluate(randomValue); // Map through curve
+
+            // Scale the shake force based on the curve and current shake intensity
+            Vector3 shakeForce = Random.insideUnitSphere * shakeIntensity * curveValue;
+            rb.AddForce(shakeForce, ForceMode.Impulse);
+
+            counter = 0;
+        }
+    }
+
+    void UpdateShakeIntensity()
+    {
         if (isIncreasing)
         {
             elapsedTime += Time.fixedDeltaTime;
@@ -63,8 +82,8 @@ public class EarthquakeShake : MonoBehaviour
             if (shakeIntensity >= maxShakeIntensity)
             {
                 shakeIntensity = maxShakeIntensity;
-                isIncreasing = false; // Start decreasing intensity
-                elapsedTime = 0f; // Reset time for decrease phase
+                isIncreasing = false;
+                elapsedTime = 0f; // Reset for decreasing phase
             }
         }
         else
@@ -75,37 +94,21 @@ public class EarthquakeShake : MonoBehaviour
             if (shakeIntensity <= 0f)
             {
                 shakeIntensity = 0f;
-                return; // Stop shaking completely
+                // Optionally restart shake cycle:
+                // isIncreasing = true;
+                // elapsedTime = 0f;
             }
         }
-
-        counter++;
-
-        if (counter >= frequency)
-        {
-            float randomValue = Random.value; // Random value between 0 and 1
-            float curveValue = shakeDistribution.Evaluate(randomValue); // Map through curve
-
-            // Scale the shake force based on the curve and current shake intensity
-            Vector3 shakeForce = Random.insideUnitSphere * shakeIntensity * curveValue;
-
-            rb.AddForce(shakeForce, ForceMode.Impulse);
-
-            counter = 0;
-        }
     }
 
-    void OnGrab(SelectEnterEventArgs args)
+    // Public methods to control climb state
+    public void OnClimbStart()
     {
-        isBeingHeld = true;
-
-        rb.isKinematic = true;
-        //rb.velocity = Vector3.zero;
-        //rb.angularVelocity = Vector3.zero;
+        climbCount++;
     }
 
-    private void OnRelease(SelectExitEventArgs args)
+    public void OnClimbEnd()
     {
-        isBeingHeld = false;
+        climbCount = Mathf.Max(0, climbCount - 1); // Avoid negative values
     }
 }
