@@ -6897,7 +6897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 769962110}
-  spawnDistance: 2
+  spawnDistance: 1
   pauseMenu: {fileID: 1129793561}
   controlsMenu: {fileID: 111046977}
   infoMenu: {fileID: 1031966264}
