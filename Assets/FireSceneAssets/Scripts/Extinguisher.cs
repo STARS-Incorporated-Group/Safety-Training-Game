@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Extinguisher : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Extinguisher : MonoBehaviour
 
     public Transform extinguisherStreamTransform;
 
-    Fire fire;
+    public Fire fire;
 
 
     
@@ -19,10 +20,23 @@ public class Extinguisher : MonoBehaviour
         // if (Physics.Raycast(extinguisherStreamTransform.position, extinguisherStreamTransform.forward, out RaycastHit hit, 100f)
         //     && hit.collider.TryGetComponent(out Fire fire) && isSpraying)
         
-        if (isSpraying)
-        {
-            fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
-        }
+        // InputDevice rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+
+        // if (rightHand.isValid)
+        // {
+        //     bool thumbstickPressed = false;
+        //     if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out thumbstickPressed))
+        //     {
+        //         isSpraying = thumbstickPressed;
+        //     }
+        // }
+
+        // if (isSpraying)
+        // {
+        // }
+
+        fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
+
     }
 }
 
