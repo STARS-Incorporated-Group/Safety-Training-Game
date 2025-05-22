@@ -89,7 +89,7 @@ public class NewGameMenuManager : MonoBehaviour
             controlsMenu.SetActive(!controlsMenu.activeSelf);
             pauseMenu.SetActive(!pauseMenu.activeSelf);
         }
-        if(info){
+        else if(info){
             infoMenu.SetActive(!infoMenu.activeSelf);
             pauseMenu.SetActive(!pauseMenu.activeSelf);
         }
