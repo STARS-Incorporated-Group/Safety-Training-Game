@@ -18,21 +18,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu UI Testing.unity
     guid: 5967b9f5c2f94f444b2c71374334a6ac
   - enabled: 0
+    path: Assets/Scenes/ETest.unity
+    guid: 7d0fdb4fd53e94c4586793b542cd4471
   - enabled: 0
     path: Assets/Scenes/New Pause UI.unity
     guid: 4537078d89b95f745b32ea31cd50bac3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1 Start Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ETest.unity
     guid: 7d0fdb4fd53e94c4586793b542cd4471
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FireTestingScene.unity
     guid: fa345ec3cbe7f4bc3875d68a383b03a5
   - enabled: 0
     path: Assets/Scenes/Main Menu Scene.unity
     guid: a61219bb0fb6873459d69738e417c090
+  - enabled: 1
+    path: Assets/Scenes/FTest.unity
+    guid: 013d9bde8878a6b4ca980743a0ec2fa1
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ec47178325c62440295188e6ead1d2e6, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: fa3a31b176a1d44668be167616a8db1c, type: 2}
