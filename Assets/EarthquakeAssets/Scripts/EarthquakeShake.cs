@@ -4,8 +4,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class EarthquakeShake : MonoBehaviour
 {
     private float initialShakeIntensity = 0f;  // Starting intensity
-    public float maxShakeIntensity = 20f;     // Maximum intensity
-    private float intensityIncreaseDuration = 30f; // Time (in seconds) to reach max intensity and back to 0
+    public float maxShakeIntensity = 25f;     // Maximum intensity
+    private float intensityIncreaseDuration = 45f; // Time (in seconds) to reach max intensity and back to 0
     private float intensityDecreaseDuration = 15f;
     private float startDelay = 10f;             // Delay (in seconds) before shaking starts
     private int frequency = 5;                 // Frequency for shaking

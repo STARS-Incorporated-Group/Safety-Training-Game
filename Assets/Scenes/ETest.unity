@@ -260,7 +260,7 @@ Transform:
   - {fileID: 1351701052}
   - {fileID: 2028063327}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &40014375
 GameObject:
@@ -590,7 +590,7 @@ Transform:
   - {fileID: 1078495156}
   - {fileID: 1094449125}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &85598489
 GameObject:
@@ -633,7 +633,7 @@ Transform:
   - {fileID: 331258616}
   - {fileID: 1668245469}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &106686684
 GameObject:
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -2168,7 +2168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 183241019}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -2504,7 +2504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -2606,7 +2606,7 @@ Transform:
   - {fileID: 300531403}
   - {fileID: 605837614}
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214879855
 GameObject:
@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -3070,7 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -3231,7 +3231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -3274,7 +3274,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245733433}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3391,7 +3391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_LocalScale.x
@@ -3473,7 +3473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -4014,7 +4014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_LocalScale.x
@@ -4096,7 +4096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -4409,7 +4409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -4452,7 +4452,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331258615}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -4603,7 +4603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -5161,7 +5161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -5317,7 +5317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -5360,7 +5360,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372870701}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -5489,7 +5489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425544869036222, guid: bb4ac9382c724a74b9dd82d157a42bbc, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 4425544869036222, guid: bb4ac9382c724a74b9dd82d157a42bbc, type: 3}
       propertyPath: m_LocalScale.x
@@ -5640,7 +5640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -5683,7 +5683,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384584895}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -7081,7 +7081,7 @@ Transform:
   - {fileID: 1894506636}
   - {fileID: 1549736069}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &470969735
 GameObject:
@@ -7220,7 +7220,7 @@ Transform:
   - {fileID: 1775514640}
   - {fileID: 1654483359}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &508199951
 GameObject:
@@ -7254,7 +7254,7 @@ Transform:
   - {fileID: 1781518325}
   - {fileID: 952057759}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &552692309
 GameObject:
@@ -7288,7 +7288,7 @@ Transform:
   - {fileID: 244637577}
   - {fileID: 2058085627}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &554625854
 GameObject:
@@ -7339,7 +7339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -7382,7 +7382,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554625854}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -8241,7 +8241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -8503,7 +8503,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 619739569}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -8572,7 +8572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -8674,7 +8674,7 @@ Transform:
   - {fileID: 1669701444}
   - {fileID: 437090774}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &620183017
 PrefabInstance:
@@ -8690,7 +8690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_LocalScale.x
@@ -8772,7 +8772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -9094,7 +9094,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 627366535}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -9163,7 +9163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -9265,7 +9265,7 @@ Transform:
   - {fileID: 1059382432}
   - {fileID: 627261075}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &635815302
 PrefabInstance:
@@ -9574,7 +9574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -9966,7 +9966,7 @@ Transform:
   - {fileID: 1407816351}
   - {fileID: 2025941364}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &688245903
 GameObject:
@@ -10050,7 +10050,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705600184
 GameObject:
@@ -10355,7 +10355,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 720362125}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -10424,7 +10424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -10526,7 +10526,7 @@ Transform:
   - {fileID: 1757073189}
   - {fileID: 1991001758}
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728489500
 GameObject:
@@ -10788,7 +10788,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 740122706}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -10857,7 +10857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -10959,7 +10959,7 @@ Transform:
   - {fileID: 1752690992}
   - {fileID: 308767}
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &750294139
 GameObject:
@@ -11351,7 +11351,7 @@ Transform:
   - {fileID: 226109354}
   - {fileID: 2015283258}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &809884784
 GameObject:
@@ -11508,7 +11508,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 809884791}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -11577,7 +11577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -11679,7 +11679,7 @@ Transform:
   - {fileID: 1003278632}
   - {fileID: 40014379}
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &811326523
 PrefabInstance:
@@ -11695,7 +11695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 09fd826f68fbfa548b1161b5bf4e738b, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 09fd826f68fbfa548b1161b5bf4e738b, type: 3}
       propertyPath: m_LocalScale.x
@@ -11822,7 +11822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -11910,7 +11910,7 @@ Transform:
   - {fileID: 181291622}
   - {fileID: 607423158}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &813461929
 GameObject:
@@ -12479,7 +12479,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824915289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -12698,7 +12698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -13693,7 +13693,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13782,7 +13782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &907896133
 GameObject:
@@ -13945,7 +13945,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934816844}
   serializedVersion: 4
-  m_Mass: 13
+  m_Mass: 14
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -13976,7 +13976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -14178,7 +14178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -14438,7 +14438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -15408,7 +15408,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080060901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15693,7 +15693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -15736,7 +15736,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085856287}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -16119,7 +16119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -16270,7 +16270,7 @@ Transform:
   - {fileID: 1569787297}
   - {fileID: 1200721198}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1105840936
 Rigidbody:
@@ -16311,7 +16311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -16551,7 +16551,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 1105840935}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -16559,37 +16559,6 @@ MonoBehaviour:
       m_AllowFreeYMovement: 0
       m_AllowFreeZMovement: 1
     m_Variable: {fileID: 0}
---- !u!1 &1112800061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1112800062}
-  m_Layer: 0
-  m_Name: Door3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1112800062
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112800061}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.6900916, y: 0, z: 2.6449568}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1121336761
 GameObject:
   m_ObjectHideFlags: 0
@@ -16623,16 +16592,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121336761}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95a9fc94dd4c941929cbda3f65193d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 346514549}
-  crouchThreshold: 1.2
-  crouchScale: {x: 0.4, y: 0.4, z: 0.4}
-  normalScale: {x: 1, y: 1, z: 1}
-  scaleSmoothSpeed: 5
+  crouchThreshold: 0.3
+  crouchScale: {x: 1.25, y: 0.4, z: 1.25}
+  normalScale: {x: 1.25, y: 2, z: 1.25}
+  scaleSmoothSpeed: 3
+  isCrouching: 0
 --- !u!114 &1121336763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16705,7 +16674,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 4
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -16814,7 +16783,7 @@ Transform:
   m_Children:
   - {fileID: 1947086504}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1121336771
 CapsuleCollider:
@@ -16907,7 +16876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -17438,7 +17407,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 1167277063}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -17507,7 +17476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -17609,7 +17578,7 @@ Transform:
   - {fileID: 458472301}
   - {fileID: 431162160}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167669527
 GameObject:
@@ -17782,7 +17751,7 @@ Transform:
   - {fileID: 1096253238}
   - {fileID: 349860513}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1226053864
 GameObject:
@@ -17918,7 +17887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -17988,7 +17957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 2cb07a643d6539c4989b8c17a01e8530, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 2cb07a643d6539c4989b8c17a01e8530, type: 3}
       propertyPath: m_LocalScale.x
@@ -18105,7 +18074,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243843219}
   serializedVersion: 4
-  m_Mass: 13
+  m_Mass: 14
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -18136,7 +18105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -18225,7 +18194,7 @@ Transform:
   - {fileID: 382823041}
   - {fileID: 52155941}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1293113256
 GameObject:
@@ -18562,7 +18531,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1314875918
 PrefabInstance:
@@ -18578,7 +18547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 2cb07a643d6539c4989b8c17a01e8530, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 2cb07a643d6539c4989b8c17a01e8530, type: 3}
       propertyPath: m_LocalScale.x
@@ -18695,7 +18664,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314875919}
   serializedVersion: 4
-  m_Mass: 13
+  m_Mass: 14
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -18726,7 +18695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -19484,7 +19453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -19769,7 +19738,7 @@ Transform:
   - {fileID: 1226053866}
   - {fileID: 280533155}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369656443
 GameObject:
@@ -19989,7 +19958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -20455,7 +20424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -20616,7 +20585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -20659,7 +20628,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442038292}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -20903,7 +20872,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461246549
 GameObject:
@@ -21172,7 +21141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 2cb07a643d6539c4989b8c17a01e8530, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 2cb07a643d6539c4989b8c17a01e8530, type: 3}
       propertyPath: m_LocalScale.x
@@ -21289,7 +21258,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485700257}
   serializedVersion: 4
-  m_Mass: 13
+  m_Mass: 14
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -21320,7 +21289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -21402,7 +21371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425544869036222, guid: bb4ac9382c724a74b9dd82d157a42bbc, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4425544869036222, guid: bb4ac9382c724a74b9dd82d157a42bbc, type: 3}
       propertyPath: m_LocalScale.x
@@ -21670,7 +21639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -26636,7 +26605,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1549736068
 GameObject:
@@ -26713,7 +26682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -27043,7 +27012,7 @@ Transform:
   - {fileID: 2119449759}
   - {fileID: 655266288}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614193064
 GameObject:
@@ -27077,7 +27046,7 @@ Transform:
   - {fileID: 2045235521}
   - {fileID: 2144645715}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633833750
 GameObject:
@@ -27145,7 +27114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1634611575
 GameObject:
@@ -27331,7 +27300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -27687,7 +27656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -27949,7 +27918,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 1659126723}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -28018,7 +27987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -28120,7 +28089,7 @@ Transform:
   - {fileID: 180674089}
   - {fileID: 386591430}
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668245468
 GameObject:
@@ -28171,7 +28140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -28214,7 +28183,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668245468}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -28561,7 +28530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -28604,7 +28573,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712391855}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -28877,7 +28846,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 1744995462}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -28946,7 +28915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -29048,7 +29017,7 @@ Transform:
   - {fileID: 1849542472}
   - {fileID: 1068234438}
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745301554
 GameObject:
@@ -29414,7 +29383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -29457,7 +29426,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772868152}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -29630,7 +29599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -29812,7 +29781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -29972,7 +29941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -30122,7 +30091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -30327,7 +30296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -30723,7 +30692,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843810461
 GameObject:
@@ -31581,7 +31550,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1865292565
 GameObject:
@@ -31927,7 +31896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -32074,7 +32043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 7636078515329145317, guid: 513546a837bb5d44cbbb2f9939336861, type: 3}
       propertyPath: m_LocalScale.x
@@ -32156,7 +32125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -32393,7 +32362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -32537,7 +32506,7 @@ Transform:
   - {fileID: 1439593396}
   - {fileID: 1509900661}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1903704758 stripped
 GameObject:
@@ -32556,7 +32525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -33826,7 +33795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -33869,7 +33838,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008411331}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -34047,7 +34016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -34203,7 +34172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -34246,7 +34215,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015758698}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -34677,7 +34646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -34859,7 +34828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -35162,7 +35131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -35365,7 +35334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -35762,7 +35731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -36118,7 +36087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -36356,7 +36325,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 2080502085}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -36425,7 +36394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -36527,7 +36496,7 @@ Transform:
   - {fileID: 1894172053}
   - {fileID: 2047841576}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2105275895
 GameObject:
@@ -36852,7 +36821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -37119,7 +37088,7 @@ MonoBehaviour:
   m_ClimbProvider: {fileID: 1121336772}
   m_ClimbTransform: {fileID: 2128770246}
   m_FilterInteractionByDistance: 1
-  m_MaxInteractionDistance: 0.1
+  m_MaxInteractionDistance: 0.2
   m_ClimbSettingsOverride:
     m_UseConstant: 1
     m_ConstantValue:
@@ -37188,7 +37157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -37290,7 +37259,7 @@ Transform:
   - {fileID: 728489504}
   - {fileID: 603643834}
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2141086844
 GameObject:
@@ -37340,7 +37309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -37521,7 +37490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
@@ -37729,7 +37698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f97b6eb19f0014db3195d605ea95ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShakeIntensity: 20
+  maxShakeIntensity: 21
   shakeDistribution:
     serializedVersion: 2
     m_Curve:
