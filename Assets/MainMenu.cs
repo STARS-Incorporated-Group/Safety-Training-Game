@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void GoToFire(){
-        SceneManager.LoadScene("FireTestingScene");
+        SceneManager.LoadScene("FTest");
     }
 
 }
