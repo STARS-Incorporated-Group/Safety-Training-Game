@@ -2414,7 +2414,6 @@ GameObject:
   - component: {fileID: 595372897}
   - component: {fileID: 595372900}
   - component: {fileID: 595372902}
-  - component: {fileID: 595372903}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -2528,36 +2527,6 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!114 &595372903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595372895}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2f25218b5af47d9b764119190609481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 0}
-  spawnDistance: 2
-  menu: {fileID: 595372895}
-  parent: {fileID: 1348314837}
-  settingsMenuGameObject: {fileID: 0}
-  infoMenuGameObject: {fileID: 0}
-  mainMenuObGameObject: {fileID: 0}
-  resumeButton: {fileID: 0}
-  restartButton: {fileID: 96977390}
-  settingsButton: {fileID: 0}
-  infoButton: {fileID: 2028303378}
-  exitButton: {fileID: 689605685}
-  restartEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  resumeEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &663851587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3458,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 689605686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1348314840}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: goToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &689605686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3859,11 +3840,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a9fc94dd4c941929cbda3f65193d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 1660039125}
   crouchThreshold: 1.2
   crouchScale: {x: 0.4, y: 0.4, z: 0.4}
   normalScale: {x: 1, y: 1, z: 1}
   scaleSmoothSpeed: 5
+  isCrouching: 0
 --- !u!1 &1275350391
 GameObject:
   m_ObjectHideFlags: 0
@@ -4145,7 +4126,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348314838}
-  - component: {fileID: 1348314839}
+  - component: {fileID: 1348314840}
+  - component: {fileID: 1348314841}
   m_Layer: 0
   m_Name: Game Menu
   m_TagString: Untagged
@@ -4171,7 +4153,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1348314839
+--- !u!114 &1348314840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4180,24 +4162,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1348314837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4f89f5a4b1623468580add8e7ea258, type: 3}
+  m_Script: {fileID: 11500000, guid: aedf045cd1159114fb21f8723b32932d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1348314841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348314837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb7506a93cb4f1469277d8231f8f839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 1660039122}
   spawnDistance: 2
-  menu: {fileID: 595372895}
+  pauseMenu: {fileID: 595372895}
+  controlsMenu: {fileID: 1459959133}
+  infoMenu: {fileID: 1646444272}
   showButton:
     m_UseReference: 1
     m_Action:
       m_Name: Show Button
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 9ee83781-582f-41d1-85b1-a50f21655d24
+      m_Id: 49755971-ddfe-4593-9306-f5b88e6800ef
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 8735312547844097991, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  pause: 1
+  controls: 0
+  info: 0
 --- !u!1 &1442703038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,14 +4346,13 @@ GameObject:
   - component: {fileID: 1459959137}
   - component: {fileID: 1459959136}
   - component: {fileID: 1459959135}
-  - component: {fileID: 1459959138}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1459959134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4444,27 +4442,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1459959138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459959133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73365369798f49c080f0dc70a6bf722a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 0}
-  spawnDistance: 2
-  menu: {fileID: 1459959133}
-  parent: {fileID: 1348314837}
-  previousMenuGameObject: {fileID: 1646444272}
-  nextMenuGameObject: {fileID: 0}
-  nextButton: {fileID: 0}
-  previousButton: {fileID: 0}
-  backButton: {fileID: 1969041456}
 --- !u!1 &1482283641
 GameObject:
   m_ObjectHideFlags: 0
@@ -4805,7 +4782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1641551037}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1348314841}
+        m_TargetAssemblyTypeName: NewGameMenuManager, Assembly-CSharp
+        m_MethodName: backPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1641551037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5493,7 +5482,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1969041457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1348314841}
+        m_TargetAssemblyTypeName: NewGameMenuManager, Assembly-CSharp
+        m_MethodName: backPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1969041457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5615,7 +5616,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1973148019}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1348314841}
+        m_TargetAssemblyTypeName: NewGameMenuManager, Assembly-CSharp
+        m_MethodName: controlsPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1973148019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5872,7 +5885,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2028303379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1348314841}
+        m_TargetAssemblyTypeName: NewGameMenuManager, Assembly-CSharp
+        m_MethodName: infoPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2028303379
 MonoBehaviour:
   m_ObjectHideFlags: 0

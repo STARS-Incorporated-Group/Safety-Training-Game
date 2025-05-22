@@ -8,7 +8,7 @@ public class SceneChanger : MonoBehaviour
     
     public void goToMainMenu()
     {
-        SceneManager.LoadScene("New Pause UI");
+        SceneManager.LoadScene("1 Start Scene");
     }
 
 }
