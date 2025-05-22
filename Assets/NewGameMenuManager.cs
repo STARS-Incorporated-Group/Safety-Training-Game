@@ -11,6 +11,10 @@ public class NewGameMenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject controlsMenu;
     public GameObject infoMenu;
+    public GameObject leftHand;
+    public GameObject rightHand;
+    public GameObject uiLeft;
+    public GameObject uiRight;
     public InputActionProperty showButton;
     public bool pause = true;
     public bool controls = false;
@@ -39,6 +43,11 @@ public class NewGameMenuManager : MonoBehaviour
                 pauseMenu.SetActive(!pauseMenu.activeSelf);
                 pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
             }
+
+            leftHand.SetActive(!leftHand.activeSelf);
+            rightHand.SetActive(!rightHand.activeSelf);
+            uiLeft.SetActive(!uiLeft.activeSelf);
+            uiRight.SetActive(!uiRight.activeSelf);
         }
         
         if(pause){
