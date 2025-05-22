@@ -4002,6 +4002,7 @@ MonoBehaviour:
   amountExtinguishedPerSecond: 0.1
   isSpraying: 0
   extinguisherStreamTransform: {fileID: 0}
+  fire: {fileID: 0}
 --- !u!198 &779115972 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1919863947656351931, guid: 6395c071d99594cb4a3bae719774fbde, type: 3}
@@ -6782,15 +6783,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6798,7 +6799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.096
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 895568494956325218, guid: 21bfe7a157b314a27ab5e3e7948d0eaf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6876,6 +6877,7 @@ MonoBehaviour:
   amountExtinguishedPerSecond: 0.1
   isSpraying: 0
   extinguisherStreamTransform: {fileID: 1538917133}
+  fire: {fileID: 1956197287161921}
 --- !u!65 &1538917138
 BoxCollider:
   m_ObjectHideFlags: 0

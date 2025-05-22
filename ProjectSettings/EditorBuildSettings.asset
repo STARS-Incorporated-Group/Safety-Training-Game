@@ -18,6 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu UI Testing.unity
     guid: 5967b9f5c2f94f444b2c71374334a6ac
   - enabled: 0
+  - enabled: 0
     path: Assets/Scenes/New Pause UI.unity
     guid: 4537078d89b95f745b32ea31cd50bac3
   - enabled: 1
